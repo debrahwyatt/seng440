@@ -1,9 +1,7 @@
-  
-#!/usr/bin/env expect
+#!/usr/bin/expect
 
 set timeout -1
 spawn ./ask     # ask is name of script to be run
 expect "How are you doing?\r"
 send -- "ok\r"
 expect eof
-
