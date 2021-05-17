@@ -1,6 +1,5 @@
   
-#!/usr/bin/expect
-
+#!/usr/bin/env expect
 spawn telnet arm 
 
 expect "login:"
