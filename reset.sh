@@ -1,8 +1,7 @@
 #!/usr/bin/sh
 
 git fetch --all
-git branch backup-master
-git reset --hard origin/master
+git reset --hard
 git pull
 
 chmod 777 reset.sh
