@@ -9,3 +9,5 @@ send "user4 "
 expect "Password:"
 
 send "q6coHjd7P "
+
+interact
