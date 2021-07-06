@@ -23,5 +23,7 @@ gcc main.c -o main.exe
     - chmod 777 ./seng440 -R
     - cd ./seng440
     - ./scripts/linux/compile.sh
-    
 
+## Reset on linux
+    - git reset --hard
+    - git pull

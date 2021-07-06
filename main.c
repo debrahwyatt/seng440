@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "arm_neon.h"
 uint32x2_t aa, bb, ss;
-
+-std=c99
 
   ////////////////////////////
  /// FUNCTION DECLARATION ///
@@ -41,8 +41,12 @@ int main( void) {
 
 //prints a matrix to terminal
 void printMatrix(int (*M)[2], int N) {
-    for(int i=0; i<N; i++){
-        for(int j=0; j<N; j++){
+    
+    int i;
+    int j;
+
+    for(i=0; i<N; i++){
+        for(j=0; j<N; j++){
             printf("[%d]", M[i][j]);
         }
         printf("\n");
@@ -56,11 +60,11 @@ void printMatrix(int (*M)[2], int N) {
 ///////////////////
 
 //Function that inverts a matrix
-int** inverse(int (*M)[2], int N) {
+// int** inverse(int (*M)[2], int N) {
     
     //The determinant
-    int d = M[0][0] * M[1][1] - M[0][1] * M[1][0];
-    printf("determinant: %d\n", d);
+    // int d = M[0][0] * M[1][1] - M[0][1] * M[1][0];
+    // printf("determinant: %d\n", d);
 
     //Determinant inverse
     // float d_inv = 1/(float)d;
@@ -81,4 +85,4 @@ int** inverse(int (*M)[2], int N) {
     //     }
     // }
     // return **M2;
-}
+// }
