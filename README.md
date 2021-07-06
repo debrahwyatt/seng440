@@ -8,13 +8,13 @@ calculates inverse of 2x2 matrix
  - WIP - 
  calculates determinant of nxn matrix which is needed to find the inverse of an nxn matrix
 
-## Compile on Windows:
-gcc main.c -o main.exe
+## Compile on Windows
+    - gcc main.c -o main.exe
 
-## To run the exe on Windows:
-.\main.exe
+## To run the exe on Windows
+    - .\main.exe
 
-## To install on ARM:
+## To install on ARM
     - log into UVic VPN
     - ssh into seng440.ece.uvic.ca
     - login using your uvic credentials
@@ -27,3 +27,11 @@ gcc main.c -o main.exe
 ## Reset on linux
     - ./scripts/linux/reset
 
+## Simulate ARM
+    - qemu-arm main.exe
+
+## Login to ARM
+    - log into the lab computer
+    - telnet arm
+    - username: user4
+    - password: q6coHjd7P
