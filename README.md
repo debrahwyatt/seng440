@@ -25,5 +25,4 @@ gcc main.c -o main.exe
     - ./scripts/linux/compile.sh
 
 ## Reset on linux
-    - git reset --hard
-    - git pull
+    - ./scripts/linux/reset
