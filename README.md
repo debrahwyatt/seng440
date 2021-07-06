@@ -26,3 +26,4 @@ gcc main.c -o main.exe
 
 ## Reset on linux
     - ./scripts/linux/reset
+
