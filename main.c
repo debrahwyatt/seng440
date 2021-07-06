@@ -2,8 +2,8 @@
  /// PACKAGES ///
 ////////////////
 #include <stdio.h>
-// #include "arm_neon.h"
-// uint32x2_t aa, bb, ss;
+#include "arm_neon.h"
+uint32x2_t aa, bb, ss;
 
 
   ////////////////////////////
