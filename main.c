@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "arm_neon.h"
 uint32x2_t aa, bb, ss;
--std=c99
+// -std=c99
 
   ////////////////////////////
  /// FUNCTION DECLARATION ///
