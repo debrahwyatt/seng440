@@ -13,3 +13,15 @@ gcc main.c -o main.exe
 
 ## To run the exe on Windows:
 .\main.exe
+
+## To install on ARM:
+    - log into UVic VPN
+    - ssh into seng440.ece.uvic.ca
+    - login using your uvic credentials
+    - cd /
+    - git clone https://github.com/debrahwyatt/seng440.git
+    - chmod 777 ./seng440 -R
+    - cd ./seng440
+    - ./scripts/linux/compile.sh
+    
+
