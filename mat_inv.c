@@ -2,9 +2,11 @@
 
 #define order 3
 
-
-int matrix[4][4] = { {3, 2, -4}, {2, 3, 3}, {5, -3, 1} };
 int augmented_matrix[3][3*order];
+int matrix[4][4] = {    {3, 2, -4}, 
+                        {2, 3, 3}, 
+                        {5, -3, 1} 
+                    };
 
 /*
    3  2 -4
