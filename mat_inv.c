@@ -8,14 +8,6 @@ float matrix[3][3] = {    {3.0, 2.0, -4.0},
                         {5.0, -3.0, 1.0} 
                     };
 float inv_matrix[3][3];
-/*
-   3  2 -4
-   2  3  3 
-   5 -3  1
-
-   1. Augment the matrix with the identity matrix 
-   2. 
-*/
 
 // input: matrix
 // output: matrix appenended to identity matrix
@@ -105,15 +97,12 @@ void pivot(){
     }
 
     // collect the inverted matrix
-    
     for(int i = 0; i < order ; i++){ 
         int k = 0;
         for(int j = order; j < 2*order; j++){
             inv_matrix[i][k++] = augmented_matrix[i][j];
         }
     }
-    // print_matrix(3, 3, inv_matrix);
-
 }
 
 int main(){

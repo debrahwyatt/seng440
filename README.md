@@ -16,9 +16,10 @@ calculates inverse of 2x2 matrix
 
 ## To install on ARM
     - log into UVic VPN
-    - ssh into seng440.ece.uvic.ca
+    - ssh seng440.ece.uvic.ca
     - login using your uvic credentials
-    - cd /
+    - mkdir tmp/dev
+    - cd tmp/dev/
     - git clone https://github.com/debrahwyatt/seng440.git
     - chmod 777 ./seng440 -R
     - cd ./seng440
