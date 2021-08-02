@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 #define order 3
-
-int augmented_matrix[3][3*order];
-int matrix[4][4] = {    {3, 2, -4}, 
-                        {2, 3, 3}, 
-                        {5, -3, 1} 
+#define precision 3
+float augmented_matrix[3][3*order];
+float matrix[3][3] = {    {3.0, 2.0, -4.0}, 
+                        {2.0, 3.0, 3.0}, 
+                        {5.0, -3.0, 1.0} 
                     };
-
+float inv_matrix[3][3];
 /*
    3  2 -4
    2  3  3 
@@ -45,7 +45,7 @@ void augment_matrix(){
 void print_augmented_matrix(){
     for(int i = 0; i < order ; i++){
         for(int j = 0; j < 2*order; j++){
-            printf("%i   ", augmented_matrix[i][j]);
+            printf("%.3f   ", augmented_matrix[i][j]);
         }
           printf("\n");
     } 
@@ -54,10 +54,10 @@ void print_augmented_matrix(){
 /*
     Prints the matrix A
 */
-void print_matrix(){
-    for(int i = 0; i < order; i++){
-        for(int j = 0; j < order; j++){
-            printf("%d ", matrix[i][j]);
+void print_matrix(int rows, int cols, float matrix[rows][cols]){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            printf("%.3f ", matrix[i][j]);
         }
         printf("\n");
     } 
@@ -86,7 +86,6 @@ void pivot(){
                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[1][j];
             }
         }
-        printf("\n");
     } 
 
     first_op = augmented_matrix[2][2];
@@ -97,19 +96,38 @@ void pivot(){
                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[2][j];
             }
         }
-        printf("\n");
     } 
-  
+    //division
+    for(int i = 0; i < order ; i++){ 
+        for(int j = order; j < 2*order; j++){
+            augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
+        }
+    }
+
+    // collect the inverted matrix
+    
+    for(int i = 0; i < order ; i++){ 
+        int k = 0;
+        for(int j = order; j < 2*order; j++){
+            inv_matrix[i][k++] = augmented_matrix[i][j];
+        }
+    }
+    // print_matrix(3, 3, inv_matrix);
 
 }
 
-
 int main(){
+    printf("\nThe original matrix\n");
+    print_matrix(3, 3, matrix);
 
+    printf("\nThe augmented matrix\n");
     augment_matrix();
     pivot();
     print_augmented_matrix();
 
-    return 0;
+    printf("\nThe inverted matrix\n");
+    print_matrix(3, 3, inv_matrix);
+    printf("\n");
 
+    return 0;
 }
