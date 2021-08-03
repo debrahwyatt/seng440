@@ -30,9 +30,10 @@ int main( void) {
                         {2, 3, 3}, 
                         {5, -3, 1} 
                     };
-    
-    //Print the matrix
-    printMatrix(matrix);    
+
+    //Determaine the length of the square matrix
+    int N = sizeof(matrix) / sizeof(matrix[0]);
+    printMatrix(matrix, N);    
 
 
     /////////////////////////////////////////////
@@ -71,14 +72,12 @@ int main( void) {
 /////////////////
 
 //prints a matrix to terminal
-void printMatrix(int (*M)[2]) {
+void printMatrix(int (*M)[2], int N) {
     
+    printf("Size of Matrix is: %dx%d\n", N, N);
+
     int i;
     int j;
-    
-    //Determaine the length of the square matrix
-    int N = sizeof(M) / sizeof(M[0]);
-    printf("Size of Matrix is: %dx%d\n", N, N);
 
     for(i=0; i<N; i++){
         for(j=0; j<N; j++){
