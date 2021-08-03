@@ -73,7 +73,7 @@ int main( void) {
     // printf("Augmented Matrix [0][0] is: %d\n", matrix[0][0]);
 
     // printMatrix(augmented_matrix, row, col);    
-    printAugment(augmented_matrix, row, col);
+    // printAugment(augmented_matrix, row, col);
 
 
 }
