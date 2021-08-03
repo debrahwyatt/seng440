@@ -13,7 +13,7 @@
   ////////////////////////////
  /// FUNCTION DECLARATION ///
 ////////////////////////////
-void printMatrix(int (*)[], int N);
+void printMatrix(int (*)[]);
 
 
   ////////////////////
@@ -33,7 +33,7 @@ int main( void) {
 
     //Determaine the length of the square matrix
     int N = sizeof(matrix) / sizeof(matrix[0]);
-    printMatrix(matrix, N);    
+    printMatrix(matrix);    
 
 
     /////////////////////////////////////////////
@@ -72,10 +72,11 @@ int main( void) {
 /////////////////
 
 //prints a matrix to terminal
-void printMatrix(int (*matrix)[2], int N) {
+void printMatrix(int (*matrix)[2]) {
     
     int row=(sizeof(matrix)/sizeof(matrix[0]));
-    int col=(sizeof(matrix)/sizeof(matrix[0][0]))/row;
+    // int col=(sizeof(matrix)/sizeof(matrix[0][0]))/row;
+    int col = 6;
 
     printf("Size of Matrix is: %dx%d\n", row, col);
 
