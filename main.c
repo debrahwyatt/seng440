@@ -45,7 +45,7 @@ int main( void) {
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
-    int augmented_matrix[3][3*order];
+    int augmented_matrix[3][2*order];
 
 
     for(i = 0; i < order; i++){
