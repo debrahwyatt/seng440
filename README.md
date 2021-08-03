@@ -39,3 +39,6 @@ calculates inverse of 2x2 matrix
     - password: q6coHjd7P
     - ./main.exe
 
+## Pipeline Commands
+    - git commit -m "testing" -a | git push
+    - git stash ; git pull ; chmod 777 . -R ; ./scripts/linux/compile.sh
