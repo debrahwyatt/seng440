@@ -5,6 +5,7 @@
 #include "arm_neon.h"
 // uint32x2_t aa, bb, ss;
 // -std=c99
+#define order 3
 
   ////////////////////////////
  /// FUNCTION DECLARATION ///
@@ -32,6 +33,10 @@ int main( void) {
     
     //Print the matrix
     printMatrix(M, N);    
+
+
+
+
 }
 
 
@@ -53,3 +58,4 @@ void printMatrix(int (*M)[2], int N) {
     }
     printf("\n");
 }
+

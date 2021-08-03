@@ -18,12 +18,7 @@ calculates inverse of 2x2 matrix
     - log into UVic VPN
     - ssh seng440.ece.uvic.ca
     - login using your uvic credentials
-    - mkdir tmp/dev
-    - cd tmp/dev/
-    - git clone https://github.com/debrahwyatt/seng440.git
-    - chmod 777 ./seng440 -R
-    - cd ./seng440
-    - ./scripts/linux/compile.sh
+    - cd / ; mkdir tmp/dev ; cd tmp/dev/ ; git clone https://github.com/debrahwyatt/seng440.git ; chmod 777 ./seng440 -R ; cd ./seng440 ; ./scripts/linux/compile.sh
     -  git stash ; git pull ; chmod 777 . -R ; ./scripts/linux/compile.sh
 
 ## Reset on linux
@@ -37,7 +32,7 @@ calculates inverse of 2x2 matrix
     - telnet arm
     - username: user4
     - password: q6coHjd7P
-    - ./main.exe
+    - chmod 777 main.exe ; ./main.exe
 
 ## Pipeline Commands
     - git commit -m "testing" -a | git push
