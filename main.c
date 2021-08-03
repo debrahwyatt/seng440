@@ -106,17 +106,17 @@ void pivot(){
 }
 
 int main(){
-    printf("\nThe original matrix\n");
-    print_matrix(3, 3, matrix);
+    // printf("\nThe original matrix\n");
+    // print_matrix(3, 3, matrix);
 
-    printf("\nThe augmented matrix\n");
-    augment_matrix();
-    pivot();
-    print_augmented_matrix();
+    // printf("\nThe augmented matrix\n");
+    // augment_matrix();
+    // pivot();
+    // print_augmented_matrix();
 
-    printf("\nThe inverted matrix\n");
-    print_matrix(3, 3, inv_matrix);
-    printf("\n");
+    // printf("\nThe inverted matrix\n");
+    // print_matrix(3, 3, inv_matrix);
+    // printf("\n");
 
-    return 0;
+    // return 0;
 }
