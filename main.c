@@ -7,7 +7,7 @@
 // -std=c99
 
 //Global variables
-#define order 2
+#define order 3
 
 
   ////////////////////////////
