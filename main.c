@@ -7,8 +7,13 @@
 // -std=c99
 
 //Global variables
-#define order 2
-
+#define order 3
+int augmented_matrix[3][3*order];
+int matrix[3][3] = {    
+                        {3, 2, -4}, 
+                        {2, 3, 3}, 
+                        {5, -3, 1} 
+                    };
 
   ////////////////////////////
  /// FUNCTION DECLARATION ///
@@ -23,19 +28,13 @@ void printMatrix(int (*)[], int N);
 int main( void) {
     // ss = vadd_u32( aa, bb);
     printf("\n");
-    
-    //2x2 Matrix Inversion: [M]^-1 = 1/(a*d - b*c) * [M]
-    int M[2][2] = {
-                    {1, 2}, 
-                    {3, 4}
-                };
 
     //Determaine the length of the square matrix
-    int N = sizeof(M) / sizeof(M[0]);
+    int N = sizeof(matrix) / sizeof(matrix[0]);
     printf("Size of Matrix is: %dx%d\n", N, N);
     
     //Print the matrix
-    printMatrix(M, N);    
+    printMatrix(matrix, N);    
 
 }
 
@@ -65,11 +64,6 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
-    int augmented_matrix[3][3*order] = {
-        {0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0}
-    };
 
 
     for(i = 0; i < order; i++){
