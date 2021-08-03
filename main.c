@@ -14,6 +14,7 @@
  /// FUNCTION DECLARATION ///
 ////////////////////////////
 void printMatrix(int (*)[], int row, int col);
+void printAugment(int (*)[], int row, int col);
 
 
   ////////////////////
@@ -69,10 +70,10 @@ int main( void) {
     col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
     printf("Augmented Matrix row size is: %d\n", row);
     printf("Augmented Matrix col size is: %d\n", col);
-    printf("Augmented Matrix [0][0] is: %d", matrix[0][0]);
+    // printf("Augmented Matrix [0][0] is: %d\n", matrix[0][0]);
 
     // printMatrix(augmented_matrix, row, col);    
-
+    printAugment(augmented_matrix, row, col);
 
 
 }
@@ -82,6 +83,11 @@ int main( void) {
  /// FUNCTIONS ///
 /////////////////
 
+void printAugment(int (*matrix)[2], int row, int col) {
+    printf("Hello world");
+
+
+}
 //prints a matrix to terminal
 void printMatrix(int (*matrix)[2], int row, int col) {
     
