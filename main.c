@@ -72,16 +72,19 @@ int main( void) {
 /////////////////
 
 //prints a matrix to terminal
-void printMatrix(int (*M)[2], int N) {
+void printMatrix(int (*matrix)[2], int N) {
     
-    printf("Size of Matrix is: %dx%d\n", N, N);
+    int row=(sizeof(matrix)/sizeof(matrix[0]));
+    int col=(sizeof(matrix)/sizeof(matrix[0][0]))/row
+
+    printf("Size of Matrix is: %dx%d\n", row, col);
 
     int i;
     int j;
 
-    for(i=0; i<N; i++){
-        for(j=0; j<N; j++){
-            printf("[%d]", M[i][j]);
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            printf("[%d]", matrix[i][j]);
         }
         printf("\n");
     }
