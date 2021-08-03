@@ -5,8 +5,9 @@
 #include "arm_neon.h"
 // uint32x2_t aa, bb, ss;
 // -std=c99
+
+//Global variables
 #define order 3
-int augmented_matrix[3][3*order]; // n+ 1
 
 
   ////////////////////////////
@@ -36,9 +37,6 @@ int main( void) {
     //Print the matrix
     printMatrix(M, N);    
 
-
-
-
 }
 
 
@@ -67,6 +65,8 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
+    int augmented_matrix[3][3*order];
+
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
