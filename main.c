@@ -52,8 +52,6 @@ int main( void) {
         for(j = 0; j < order*2; j++){
             if( (i < order) && (j < order) ){
                 augmented_matrix[i][j] = matrix[i][j];
-                printf("[%d]", matrix[i][j]);
-
             }
             else if(i == mat_i && j == mat_j) {
                augmented_matrix[i][j] = 1;
