@@ -67,24 +67,24 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
-    int matrix[3][3] = {    
-                        {3, 2, -4}, 
-                        {2, 3, 3}, 
-                        {5, -3, 1} 
-                    };
+    // int matrix[3][3] = {    
+    //                     {3, 2, -4}, 
+    //                     {2, 3, 3}, 
+    //                     {5, -3, 1} 
+    //                 };
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
             if( (i < order) && (j < order) ){
-                augmented_matrix[i][j] = matrix[i][j];
+                // augmented_matrix[i][j] = matrix[i][j];
             }
             else if(i == mat_i && j == mat_j) {
-               augmented_matrix[i][j] = 1;
+               // augmented_matrix[i][j] = 1;
                mat_i++;
                mat_j++;
             }
             else{
-                augmented_matrix[i][j] = 0;
+                // augmented_matrix[i][j] = 0;
             }
         }
     }
