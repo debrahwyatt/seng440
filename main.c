@@ -52,6 +52,8 @@ int main( void) {
         for(j = 0; j < order*2; j++){
             if( (i < order) && (j < order) ){
                 augmented_matrix[i][j] = matrix[i][j];
+                printf("[%d]", augmented_matrix[i][j]);
+
             }
             else if(i == mat_i && j == mat_j) {
                augmented_matrix[i][j] = 1;
@@ -71,7 +73,7 @@ int main( void) {
     printf("Augmented Matrix col size is: %d\n", col);
     // printf("Augmented Matrix [0][0] is: %d\n", matrix[0][0]);
 
-    printMatrix(augmented_matrix, row, col);    
+    // printMatrix(augmented_matrix, row, col);    
 
 
 
