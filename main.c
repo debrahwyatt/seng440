@@ -75,7 +75,7 @@ int main( void) {
 void printMatrix(int (*matrix)[2], int N) {
     
     int row=(sizeof(matrix)/sizeof(matrix[0]));
-    int col=(sizeof(matrix)/sizeof(matrix[0][0]))/row
+    int col=(sizeof(matrix)/sizeof(matrix[0][0]))/row;
 
     printf("Size of Matrix is: %dx%d\n", row, col);
 
