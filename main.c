@@ -8,7 +8,6 @@
 
 //Global variables
 #define order 3
-int augmented_matrix[3][3*order];
 
 
   ////////////////////////////
@@ -25,7 +24,8 @@ int main( void) {
     // ss = vadd_u32( aa, bb);
     printf("\n");
     
-    //2x2 Matrix Inversion: [M]^-1 = 1/(a*d - b*c) * [M]
+    //Define static matricies
+    int augmented_matrix[3][3*order];
     int matrix[3][3] = {    
                         {3, 2, -4}, 
                         {2, 3, 3}, 
