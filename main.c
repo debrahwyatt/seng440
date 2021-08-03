@@ -67,7 +67,11 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
-
+    int matrix[3][3] = {    
+                        {3, 2, -4}, 
+                        {2, 3, 3}, 
+                        {5, -3, 1} 
+                    };
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
