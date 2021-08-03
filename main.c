@@ -61,7 +61,7 @@ void printMatrix(int (*M)[2], int N) {
     printf("\n");
 }
 
-void augment_matrix(int (*M)[2]){
+void augment_matrix(){
     //Augmentation variables
     int i = 0;
     int j = 0;
