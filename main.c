@@ -17,9 +17,8 @@
 // // ////////////////////
 
 int main( void) {
+    printf("Hello, World!\n");
 }
-//     printf("Hello, World!\n");
-
 // //     // ss = vadd_u32( aa, bb);
 // //     printf("\n");
     
