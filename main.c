@@ -7,7 +7,7 @@
 // -std=c99
 
 //Global variables
-#define order 3
+#define order 2
 
 
   ////////////////////////////
@@ -65,7 +65,11 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
-    int augmented_matrix[3][3*order];
+    int augmented_matrix[3][3*order] = {
+        {0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0}
+    };
 
 
     for(i = 0; i < order; i++){
