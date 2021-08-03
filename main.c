@@ -67,7 +67,7 @@ int main( void) {
 
     int row2 = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
     int col2 = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row2;
-    printMatrix(augmented_matrix, col2, row2);    
+    // printMatrix(augmented_matrix, col2, row2);    
 
 
 
