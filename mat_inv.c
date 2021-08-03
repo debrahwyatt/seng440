@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 #define order 3
-#define precision 3
-float augmented_matrix[3][3*order];
-float matrix[3][3] = {    {3.0, 2.0, -4.0}, 
+
+float augmented_matrix[3][3*order]; // n+ 1
+float matrix[3][3] = {  {3.0, 2.0, -4.0}, 
                         {2.0, 3.0, 3.0}, 
                         {5.0, -3.0, 1.0} 
                     };
@@ -61,36 +61,19 @@ void print_matrix(int rows, int cols, float matrix[rows][cols]){
 void pivot(){
     int first_op;
     int second_op;
-    first_op = augmented_matrix[0][0];
-    for(int i = 0; i < order - 1; i++){ 
+    for(int m = 0; m < order; m++){
+        first_op = augmented_matrix[m][m];
+        for(int i = 0; i < order ; i++){ 
+        second_op = augmented_matrix[i][m];
         for(int j = 0; j < 2*order; j++){
-            second_op = matrix[i+1][0]; 
-            augmented_matrix[i+1][j] = first_op*augmented_matrix[i+1][j] - second_op*augmented_matrix[0][j];
-        }
-        printf("\n");
-    } 
-    first_op = augmented_matrix[1][1];
-    
-    for(int i = 0; i < order ; i++){ 
-        second_op = augmented_matrix[i][1];
-        for(int j = 0; j < 2*order; j++){
-            if(i != 1){
-                augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[1][j];
+            if(i != m){
+                augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
             }
         }
     } 
 
-    first_op = augmented_matrix[2][2];
-    for(int i = 0; i < order ; i++){ 
-        second_op = augmented_matrix[i][2];
-        for(int j = 0; j < 2*order; j++){
-            if(i != 2){
-                augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[2][j];
-            }
-        }
-    } 
-    //division
-    for(int i = 0; i < order ; i++){ 
+    }
+     for(int i = 0; i < order ; i++){ 
         for(int j = order; j < 2*order; j++){
             augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
         }
@@ -104,6 +87,7 @@ void pivot(){
         }
     }
 }
+   
 
 int main(){
     printf("\nThe original matrix\n");
