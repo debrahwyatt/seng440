@@ -14,6 +14,7 @@
  /// FUNCTION DECLARATION ///
 ////////////////////////////
 void printMatrix(int (*)[], int row, int col);
+void printAugMatrix(int (*)[], int row, int col);
 
 
   ////////////////////
@@ -71,7 +72,7 @@ int main( void) {
     printf("Augmented Matrix col size is: %d\n", col);
     // printf("Augmented Matrix [0][0] is: %d\n", matrix[0][0]);
 
-    // printMatrix(augmented_matrix, row, col);    
+    printAugMatrix(augmented_matrix, row, col);    
 
 
 
@@ -90,6 +91,23 @@ void printMatrix(int (*matrix)[2], int row, int col) {
     // int col = N;
     // int row = N;
 
+    printf("Size of Matrix is: %dx%d\n", row, col);
+
+    int i;
+    int j;
+
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            printf("[%d]", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+//prints a matrix to terminal
+void printAugMatrix(int (*matrix)[2], int row, int col) {
+    
     printf("Size of Matrix is: %dx%d\n", row, col);
 
     int i;
