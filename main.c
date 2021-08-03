@@ -1,13 +1,13 @@
-#include <stdio.h>
+// #include <stdio.h>
 
-#define order 3
-#define precision 3
-float augmented_matrix[3][3*order];
-float matrix[3][3] = {    {3.0, 2.0, -4.0}, 
-                        {2.0, 3.0, 3.0}, 
-                        {5.0, -3.0, 1.0} 
-                    };
-float inv_matrix[3][3];
+// #define order 3
+// #define precision 3
+// float augmented_matrix[3][3*order];
+// float matrix[3][3] = {    {3.0, 2.0, -4.0}, 
+//                         {2.0, 3.0, 3.0}, 
+//                         {5.0, -3.0, 1.0} 
+//                     };
+// float inv_matrix[3][3];
 
 // input: matrix
 // output: matrix appenended to identity matrix

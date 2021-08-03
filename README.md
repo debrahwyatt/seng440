@@ -36,4 +36,5 @@ calculates inverse of 2x2 matrix
     - telnet arm
     - username: user4
     - password: q6coHjd7P
+    - ./main.exe
 
