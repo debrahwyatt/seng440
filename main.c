@@ -8,7 +8,6 @@
 
 //Global variables
 #define order 3
-int augmented_matrix[3][3*order];
 
 
   ////////////////////////////
@@ -67,6 +66,7 @@ void augment_matrix(){
     int j = 0;
     int mat_i = 0;
     int mat_j = order;
+    int augmented_matrix[3][3*order];
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
@@ -79,7 +79,7 @@ void augment_matrix(){
                mat_j++;
             }
             else{
-                // augmented_matrix[i][j] = 0;
+                augmented_matrix[i][j] = 0;
             }
         }
     }
