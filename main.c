@@ -71,15 +71,15 @@ void augment_matrix(){
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
             if( (i < order) && (j < order) ){
-                augmented_matrix[i][j] = matrix[i][j];
+                // augmented_matrix[i][j] = matrix[i][j];
             }
             else if(i == mat_i && j == mat_j) {
-               augmented_matrix[i][j] = 1;
+               // augmented_matrix[i][j] = 1;
                mat_i++;
                mat_j++;
             }
             else{
-                augmented_matrix[i][j] = 0;
+                // augmented_matrix[i][j] = 0;
             }
         }
     }
