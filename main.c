@@ -74,7 +74,7 @@ void augment_matrix(){
                 // augmented_matrix[i][j] = M[i][j];
             }
             else if(i == mat_i && j == mat_j) {
-               // augmented_matrix[i][j] = 1;
+               augmented_matrix[i][j] = 1;
                mat_i++;
                mat_j++;
             }
