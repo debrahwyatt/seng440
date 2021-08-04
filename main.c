@@ -49,7 +49,7 @@ int main(void) {
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
-            if( (i < order) && (j < order) ){
+            if( (j < order) ){
                 augmented_matrix[i][j] = matrix[i][j];
             }
             else if(i == mat_i && j == mat_j) {
