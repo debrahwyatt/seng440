@@ -13,7 +13,7 @@
   ////////////////////////////
  /// FUNCTION DECLARATION ///
 ////////////////////////////
-void printMatrix(int (*)[], int row, int col);
+void printMatrix(short (*)[], unsigned char row, unsigned char col);
 
 
   ////////////////////
@@ -121,7 +121,7 @@ int main(void) {
 /////////////////
 
 //prints a matrix to terminal
-void printMatrix(int (*matrix)[2], int row, int col) {
+void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
     
     //increment variables
     unsigned char x;
