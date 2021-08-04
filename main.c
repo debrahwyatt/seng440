@@ -34,8 +34,9 @@ int main(void) {
     //Determaine the length of the square matrix
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
-
-
+    
+    printMatrix(matrix, row, col);    
+    
 
     /////////////////////////////////////////////
     //Augmentation function /////////////////////
