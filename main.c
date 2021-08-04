@@ -86,8 +86,11 @@ void printMatrix(int (*matrix)[2]) {
     unsigned char y;
 
     //Determaine the column and row length of the matrix
-    unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
-    unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
+    // unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
+    // unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
+
+    unsigned char row = 3;
+    unsigned char col = 3;
 
     printf("Size of Matrix is: %dx%d\n", row, col);
 
