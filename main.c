@@ -34,7 +34,22 @@ int main(void) {
 
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
-    printMatrix(matrix, row, col);    
+
+    //increment variables
+    unsigned short x;
+    unsigned short y;
+
+    printf("Size of Matrix is: %dx%d\n", row, col);
+
+    for(x=0; x<row; x++){
+        for(y=0; y<col; y++){
+            printf("[%d]", matrix[x][y]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+    // printMatrix(matrix, row, col);    
 
 
       ////////////////////
@@ -71,7 +86,7 @@ int main(void) {
 
     row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
     col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-    printMatrix(augmented_matrix, row, col);    
+    // printMatrix(augmented_matrix, row, col);    
 
 
       ////////////////////
@@ -128,20 +143,20 @@ int main(void) {
 //prints a matrix to terminal
 void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
     
-    //increment variables
-    unsigned short x;
-    unsigned short y;
+    // //increment variables
+    // unsigned short x;
+    // unsigned short y;
 
-    printf("Size of Matrix is: %dx%d\n", row, col);
+    // printf("Size of Matrix is: %dx%d\n", row, col);
 
-    for(x=0; x<row; x++){
-        for(y=0; y<col; y++){
-            printf("[%d]", matrix[x][y]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    printf("[%d]", matrix[1][0]);
+    // for(x=0; x<row; x++){
+    //     for(y=0; y<col; y++){
+    //         printf("[%d]", matrix[x][y]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
+    // printf("[%d]", matrix[1][0]);
 
 }
 
