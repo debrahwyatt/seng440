@@ -68,6 +68,39 @@ int main(void) {
     col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
     printMatrix(augmented_matrix, row, col);    
 
+
+    unsigned char first_op;
+    unsigned char second_op;
+    unsigned char m = 0;
+
+    for(m = 0; m < order; m++){
+        first_op = augmented_matrix[m][m];
+
+        for(i = 0; i < order ; i++){ 
+            second_op = augmented_matrix[i][m];
+
+            for(j = 0; j < 2*order; j++){
+                if(i != m){
+                    augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
+                }
+            }
+        } 
+    }
+     for(i = 0; i < order ; i++){ 
+        for(j = order; j < 2*order; j++){
+            augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
+        }
+    }
+
+    int k = 0;
+    // collect the inverted matrix
+    for(i = 0; i < order ; i++){ 
+        k = 0;
+        for(j = order; j < 2*order; j++){
+            inv_matrix[i][k++] = augmented_matrix[i][j];
+        }
+    }
+
 }
 
 
