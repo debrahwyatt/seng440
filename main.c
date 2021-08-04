@@ -35,7 +35,6 @@ int main(void) {
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
 
-    printMatrix(matrix, row, col);    
 
 
     /////////////////////////////////////////////
@@ -71,6 +70,8 @@ int main(void) {
     printf("Augmented Matrix col size is: %d\n", col);
     // printf("Augmented Matrix [0][0] is: %d\n", matrix[0][0]);
     // printMatrix(augmented_matrix, row, col);    
+    printMatrix(matrix, row, col);    
+
 }
 
 
