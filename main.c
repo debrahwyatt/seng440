@@ -141,6 +141,8 @@ void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
         printf("\n");
     }
     printf("\n");
+    printf("[%d]", matrix[2][2]);
+
 }
 
 
