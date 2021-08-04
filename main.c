@@ -20,7 +20,7 @@ void printMatrix(int (*)[], int row, int col);
  /// PROGRAM MAIN ///
 ////////////////////
 
-int main( void) {
+int main(void) {
     // ss = vadd_u32( aa, bb);
     printf("\n");
     
@@ -32,8 +32,8 @@ int main( void) {
                     };
 
     //Determaine the length of the square matrix
-    int row = sizeof(matrix) / sizeof(matrix[0]);
-    int col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
+    unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
+    unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
 
     printMatrix(matrix, row, col);    
 
@@ -41,12 +41,12 @@ int main( void) {
     /////////////////////////////////////////////
     //Augmentation function /////////////////////
     /////////////////////////////////////////////
-    int i = 0;
-    int j = 0;
-    int mat_i = 0;
-    int mat_j = order;
-    int augmented_matrix[3][2*order];
+    unsigned char i = 0;
+    unsigned char j = 0;
+    unsigned char mat_i = 0;
+    unsigned char mat_j = order;
 
+    int augmented_matrix[3][2*order];
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
@@ -87,8 +87,8 @@ void printMatrix(int (*matrix)[2], int row, int col) {
     // int row = N;
     printf("Size of Matrix is: %dx%d\n", row, col);
 
-    int i;
-    int j;
+    unsigned char i;
+    unsigned char j;
 
     for(i=0; i<row; i++){
         for(j=0; j<col; j++){
