@@ -134,11 +134,12 @@ void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
 
     printf("Size of Matrix is: %dx%d\n", row, col);
 
-    for(x=1; x<=row; x++){
-        for(y=1; y<=col; y++){
+    for(x=0; x<row; x++){
+        for(y=0; y<col; y++){
             printf("[%d]", matrix[x][y]);
         }
         printf("\n");
+        y=0;
     }
     printf("\n");
     // printf("[%d]", matrix[2][2]);
