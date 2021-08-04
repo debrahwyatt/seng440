@@ -37,9 +37,9 @@ int main(void) {
     printMatrix(matrix, row, col);    
 
 
-    /////////////////////////////////////////////
-    //Augmentation function /////////////////////
-    /////////////////////////////////////////////
+      ////////////////////
+     /// AUGMENTATION ///
+    ////////////////////
     unsigned char i = 0;
     unsigned char j = 0;
     unsigned char mat_i = 0;
@@ -64,11 +64,10 @@ int main(void) {
     }
     //////////////////////////////////////////////////
 
-    row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
-    col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-    printMatrix(augmented_matrix, row, col);    
 
-
+      ////////////////////
+     ///     PIVOT    ///
+    ////////////////////
     unsigned char first_op;
     unsigned char second_op;
     unsigned char m = 0;
@@ -87,7 +86,15 @@ int main(void) {
         } 
     }
 
-    
+    row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
+    col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
+    printMatrix(augmented_matrix, row, col);    
+
+
+      ////////////////////
+     ///   DIVISION   ///
+    ////////////////////
+
     // for(i = 0; i < order ; i++){ 
     //     for(j = order; j < 2*order; j++){
     //         augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
