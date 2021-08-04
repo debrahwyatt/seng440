@@ -25,7 +25,7 @@ int main(void) {
     printf("\n");
     
     //2x2 Matrix Inversion: [M]^-1 = 1/(a*d - b*c) * [M]
-    int matrix[3][3] = {    
+    short matrix[3][3] = {    
                         {3, 2, -4}, 
                         {2, 3, 3}, 
                         {5, -3, 1} 
@@ -45,7 +45,7 @@ int main(void) {
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
 
-    int augmented_matrix[3][order*2];
+    short augmented_matrix[3][order*2];
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
