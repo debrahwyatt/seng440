@@ -62,11 +62,11 @@ int main(void) {
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
 
-    short augmented_matrix[3][order*2];
+    int augmented_matrix[3][order*2];
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
-            if( (j < order) ){
+            if( (i < order) && (j < order) ){
                 augmented_matrix[i][j] = matrix[i][j];
             }
             else if(i == mat_i && j == mat_j) {
@@ -134,7 +134,7 @@ int main(void) {
     printf("\n");
     // printMatrix(augmented_matrix, row, col);    
     ///////////////////////////////////////////
-    
+
 
     // printMatrix(augmented_matrix, row, col);    
 
