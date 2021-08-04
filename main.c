@@ -32,8 +32,8 @@ int main(void) {
                     };
 
 
-    unsigned char row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
-    unsigned char col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
+    unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
+    unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
     printMatrix(matrix, row, col);    
 
 
