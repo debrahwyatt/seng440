@@ -8,11 +8,8 @@ calculates inverse of 2x2 matrix
  - WIP - 
  calculates determinant of nxn matrix which is needed to find the inverse of an nxn matrix
 
-## Compile on Windows
-    - gcc main.c -o main.exe
-
-## To run the exe on Windows
-    - .\main.exe
+## Compile and run on Windows
+    - gcc mat_inv.c -o mat_inv.exe ; .\mat_inv.exe
 
 ## To install on ARM
     - log into UVic VPN

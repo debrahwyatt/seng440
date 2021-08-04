@@ -95,6 +95,9 @@ int main(){
 
     printf("\nThe augmented matrix\n");
     augment_matrix();
+    print_augmented_matrix();
+
+    printf("\nThe augmented matrix (post pivot)\n");
     pivot();
     print_augmented_matrix();
 
