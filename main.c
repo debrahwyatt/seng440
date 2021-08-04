@@ -129,8 +129,8 @@ int main(void) {
 void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
     
     //increment variables
-    unsigned char x;
-    unsigned char y;
+    unsigned short x;
+    unsigned short y;
 
     printf("Size of Matrix is: %dx%d\n", row, col);
 
