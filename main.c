@@ -45,7 +45,7 @@ int main(void) {
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
 
-    int augmented_matrix[3][3*order];
+    int augmented_matrix[3][order*2];
 
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
