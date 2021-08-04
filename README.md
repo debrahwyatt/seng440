@@ -32,7 +32,7 @@ calculates inverse of 2x2 matrix
     - telnet arm
     - username: user4
     - password: q6coHjd7P
-    - chmod 777 main.exe ; ./main.exe
+    - chmod 777 main.exe ; ./main.exe ; rm main.exe
 
 ## Pipeline Commands
     - git commit -m "testing" -a | git push

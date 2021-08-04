@@ -87,12 +87,12 @@ void printMatrix(int (*matrix)[2], int row, int col) {
     // int row = N;
     printf("Size of Matrix is: %dx%d\n", row, col);
 
-    unsigned char i;
-    unsigned char j;
+    unsigned char o;
+    unsigned char p;
 
-    for(i=0; i<row; i++){
-        for(j=0; j<col; j++){
-            printf("[%d]", matrix[i][j]);
+    for(o=0; o<row; o++){
+        for(p=0; p<col; p++){
+            printf("[%d]", matrix[o][p]);
         }
         printf("\n");
     }
