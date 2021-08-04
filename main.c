@@ -64,6 +64,10 @@ int main(void) {
     }
     //////////////////////////////////////////////////
 
+    row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
+    col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
+    printMatrix(augmented_matrix, row, col);    
+
 
       ////////////////////
      ///     PIVOT    ///
@@ -86,8 +90,7 @@ int main(void) {
         } 
     }
 
-    row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
-    col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
+
     printMatrix(augmented_matrix, row, col);    
 
 
