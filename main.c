@@ -86,20 +86,22 @@ int main(void) {
             }
         } 
     }
-     for(i = 0; i < order ; i++){ 
-        for(j = order; j < 2*order; j++){
-            augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
-        }
-    }
 
-    int k = 0;
-    // collect the inverted matrix
-    for(i = 0; i < order ; i++){ 
-        k = 0;
-        for(j = order; j < 2*order; j++){
-            inv_matrix[i][k++] = augmented_matrix[i][j];
-        }
-    }
+    
+    // for(i = 0; i < order ; i++){ 
+    //     for(j = order; j < 2*order; j++){
+    //         augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
+    //     }
+    // }
+
+    // int k = 0;
+    // // collect the inverted matrix
+    // for(i = 0; i < order ; i++){ 
+    //     k = 0;
+    //     for(j = order; j < 2*order; j++){
+    //         inv_matrix[i][k++] = augmented_matrix[i][j];
+    //     }
+    // }
 
 }
 
