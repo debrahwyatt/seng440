@@ -139,10 +139,9 @@ void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
             printf("[%d]", matrix[x][y]);
         }
         printf("\n");
-        y=0;
     }
     printf("\n");
-    // printf("[%d]", matrix[2][2]);
+    printf("[%d]", matrix[1][0]);
 
 }
 
