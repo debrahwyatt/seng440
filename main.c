@@ -51,10 +51,10 @@ int main(void) {
         for(j = 0; j < order*2; j++){
             if( (j < order) ){
                 augmented_matrix[i][j] = matrix[i][j];
-                printf("%d\n", i);
-                printf("%d\n", j);
-                printf("%d\n", matrix[i][j]);
-                printf("\n");
+                // printf("%d\n", i);
+                // printf("%d\n", j);
+                // printf("%d\n", matrix[i][j]);
+                // printf("\n");
 
             }
             else if(i == mat_i && j == mat_j) {
