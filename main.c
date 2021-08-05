@@ -120,9 +120,9 @@ int main(void) {
     }
 
 
-    ///////////////////
-    ///Print matrix///
-    /////////////////
+    /////////////////////////////
+    ///Print Augmented matrix///
+    ///////////////////////////
 
     printf("Size of Matrix is: %dx%d\n", row, col);
     for(x=0; x<row; x++){
