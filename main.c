@@ -50,14 +50,14 @@ int main(void) {
     ///Print matrix///
     /////////////////
 
-    printf("Size of Matrix is: %dx%d\n", row, col);
-    for(i=0; i<row; i++){
-        for(j=0; j<col; j++){
-            printf("[%d]", matrix[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
+    // printf("Size of Matrix is: %dx%d\n", row, col);
+    // for(i=0; i<row; i++){
+    //     for(j=0; j<col; j++){
+    //         printf("[%d]", matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
     ///////////////////////////////////////////
 
 
@@ -90,14 +90,14 @@ int main(void) {
 
     row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
     col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-    printf("Size of Matrix is: %dx%d\n", row, col);
-    for(i=0; i<row; i++){
-        for(j=0; j<col; j++){
-            printf("[%d]", augmented_matrix[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
+    // printf("Size of Matrix is: %dx%d\n", row, col);
+    // for(i=0; i<row; i++){
+    //     for(j=0; j<col; j++){
+    //         printf("[%d]", augmented_matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
     ///////////////////////////////////////////
 
 

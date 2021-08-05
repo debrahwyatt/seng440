@@ -27,7 +27,7 @@ calculates inverse of 2x2 matrix
 ## Login to ARM
     - log into the lab computer
     - telnet arm
-    - username: user4
+    - username: user3
     - password: q6coHjd7P
     - chmod 777 main.exe ; ./main.exe ; rm main.exe
 
