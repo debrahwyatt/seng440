@@ -31,9 +31,6 @@ int main(void) {
                         {5, -3, 1} 
                     };
 
-
-
-
     //system variables
     unsigned char i = 0;
     unsigned char j = 0;
