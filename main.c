@@ -125,9 +125,9 @@ int main(void) {
     ///////////////////////////
 
     printf("Size of Matrix is: %dx%d\n", row, col);
-    for(x=0; x<row; x++){
-        for(y=0; y<col; y++){
-            printf("[%d]", augmented_matrix[x][y]);
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            printf("[%d]", augmented_matrix[i][j]);
         }
         printf("\n");
     }
