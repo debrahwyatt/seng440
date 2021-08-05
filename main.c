@@ -13,6 +13,7 @@
   ////////////////////////////
  /// FUNCTION DECLARATION ///
 ////////////////////////////
+
 void printMatrix(short (*)[], unsigned char row, unsigned char col);
 
 
@@ -21,10 +22,9 @@ void printMatrix(short (*)[], unsigned char row, unsigned char col);
 ////////////////////
 
 int main(void) {
-    // ss = vadd_u32( aa, bb);
     printf("\n");
     
-    //2x2 Matrix Inversion: [M]^-1 = 1/(a*d - b*c) * [M]
+    // A 3x3 example matrix
     short matrix[3][3] = {    
                         {3, 2, -4}, 
                         {2, 3, 3}, 
@@ -32,38 +32,43 @@ int main(void) {
                     };
 
 
+
+
+    //system variables
+    unsigned char i = 0;
+    unsigned char j = 0;
+    unsigned char m = 0;
+    unsigned char mat_i = 0;
+    unsigned char mat_j = order;
+    unsigned char first_op;
+    unsigned char second_op;    
+
+    long augmented_matrix[3][order*2];
+
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
 
-    //increment variables
-    unsigned short x;
-    unsigned short y;
 
     ///////////////////
     ///Print matrix///
     /////////////////
+
     printf("Size of Matrix is: %dx%d\n", row, col);
-    for(x=0; x<row; x++){
-        for(y=0; y<col; y++){
-            printf("[%d]", matrix[x][y]);
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            printf("[%d]", matrix[i][j]);
         }
         printf("\n");
     }
     printf("\n");
-    // printMatrix(matrix, row, col);    
     ///////////////////////////////////////////
 
 
       ////////////////////
      /// AUGMENTATION ///
     ////////////////////
-    unsigned char i = 0;
-    unsigned char j = 0;
-    unsigned char mat_i = 0;
-    unsigned char mat_j = order;
 
-    long augmented_matrix[3][order*2];
-
+    // Sets up the matrix adjacent to an identity matrix
     for(i = 0; i < order; i++){
         for(j = 0; j < order*2; j++){
             if( (i < order) && (j < order) ){
@@ -81,31 +86,27 @@ int main(void) {
     }
     //////////////////////////////////////////////////
 
+
+    /////////////////////////////
+    ///Print Augmented matrix///
+    ///////////////////////////
+
     row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
     col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-
-    ///////////////////
-    ///Print matrix///
-    /////////////////
     printf("Size of Matrix is: %dx%d\n", row, col);
-    for(x=0; x<row; x++){
-        for(y=0; y<col; y++){
-            printf("[%d]", augmented_matrix[x][y]);
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            printf("[%d]", augmented_matrix[i][j]);
         }
         printf("\n");
     }
     printf("\n");
-    // printMatrix(augmented_matrix, row, col);    
     ///////////////////////////////////////////
-
 
 
       ////////////////////
      ///     PIVOT    ///
     ////////////////////
-    unsigned char first_op;
-    unsigned char second_op;
-    unsigned char m = 0;
 
     for(m = 0; m < order; m++){
         first_op = augmented_matrix[m][m];
@@ -121,9 +122,11 @@ int main(void) {
         } 
     }
 
+
     ///////////////////
     ///Print matrix///
     /////////////////
+
     printf("Size of Matrix is: %dx%d\n", row, col);
     for(x=0; x<row; x++){
         for(y=0; y<col; y++){
@@ -132,11 +135,7 @@ int main(void) {
         printf("\n");
     }
     printf("\n");
-    // printMatrix(augmented_matrix, row, col);    
-    ///////////////////////////////////////////
-
-
-    // printMatrix(augmented_matrix, row, col);    
+    /////////////////////////////////////////////////
 
 
       ////////////////////
