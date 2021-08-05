@@ -40,7 +40,7 @@ int main(void) {
     unsigned char first_op;
     unsigned char second_op;    
 
-    long augmented_matrix[3][order*2];
+    int augmented_matrix[3][order*2];
 
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
