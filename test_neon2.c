@@ -2,6 +2,9 @@
 #include "arm_neon.h"
 
 void main(){
+    
+    //Program variables
+    unsigned char i = 0;
 
     // The starting matrix
     int16_t M0[] = {1, 2, 3};
@@ -10,15 +13,15 @@ void main(){
 
     //Print the starting matrix
     printf("\n");
-    for(char i = 0; i < 3; i++){
+    for(i = 0; i < 3; i++){
         printf("%i ",  M0[i]);
     }
     printf("\n");
-    for(char i = 0; i < 3; i++){
+    for(i = 0; i < 3; i++){
         printf("%i ",  M1[i]);
     }
     printf("\n");
-    for(char i = 0; i < 3; i++){
+    for(i = 0; i < 3; i++){
         printf("%i ",  M2[i]);
     }
     printf("\n");
@@ -32,19 +35,21 @@ void main(){
 
     //Print the augmented matrix shell
     printf("\n");
-    for(char i = 0; i < 6; i++){
+    for(i = 0; i < 6; i++){
         printf("%i ",  A0[i]);
     }
     printf("\n");
-    for(char i = 0; i < 6; i++){
+    for(i = 0; i < 6; i++){
         printf("%i ",  A1[i]);
     }
     printf("\n");
-    for(char i = 0; i < 6; i++){
+    for(i = 0; i < 6; i++){
         printf("%i ",  A2[i]);
     }
     printf("\n");
     printf("\n");
+
+
 
     // int16x4_t b = {1, 2, 3 ,4 };
     // int16x4_t d = {2,2,2,2};
