@@ -33,15 +33,15 @@ void main(){
     //Print the augmented matrix shell
     printf("\n");
     for(char i = 0; i < 6; i++){
-        printf("%i ",  M0[i]);
+        printf("%i ",  A0[i]);
     }
     printf("\n");
     for(char i = 0; i < 6; i++){
-        printf("%i ",  M1[i]);
+        printf("%i ",  A1[i]);
     }
     printf("\n");
     for(char i = 0; i < 6; i++){
-        printf("%i ",  M2[i]);
+        printf("%i ",  A2[i]);
     }
     printf("\n");
     printf("\n");
