@@ -34,3 +34,10 @@ calculates inverse of 2x2 matrix
 ## Pipeline Commands
     - git commit -m "testing" -a | git push
     - git stash ; git pull ; chmod 777 . -R ; ./scripts/linux/compile.sh
+
+
+## VM Instructions
+    - qemu-system-arm -m 4G -smp 2 -hda Fedora-Minimal-armhfp-29-1.2-sda.qcow2 -machine virt-2.11 -kernel vmlinuz-4.18.16-300.fc29.armv7hl -initrd initramfs-4.18.16-300.fc29.armv7hl.img  -append "console=ttyAMA0 rw root=LABEL=_/ rootwait ipv6.disable=1" -nographic -netdev user,id=seng440,hostfwd=tcp::2222-:22 -device virtio-net-pci,netdev=seng440
+    - Username: root
+    - Password: seng440
+    - gcc test_neon.c -mfpu=neon -march=armv7-a -o test_neon
