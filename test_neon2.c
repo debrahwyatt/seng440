@@ -13,20 +13,17 @@ void main(){
     int16_t A1[] = {M1[0], M1[1], M1[2], 0, 1, 0};
     int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
 
-    // Starting the augmented matrix
-    printf("M: %i\n",  M0[0]);
-
     //Print the starting matrix
     for(int i = 0; i < 3; i++){
-        printf("M: %i",  M0[i]);
+        printf("%i ",  M0[i]);
     }
     printf("\n");
     for(int i = 0; i < 3; i++){
-        printf("M: %i",  M1[i]);
+        printf("%i ",  M1[i]);
     }
     printf("\n");
     for(int i = 0; i < 3; i++){
-        printf("M: %i",  M2[i]);
+        printf("%i ",  M2[i]);
     }
     printf("\n");
 
