@@ -9,10 +9,10 @@ void main(){
     int16_t M2[] = {7, 8, 9};
 
     //The augmented matrix shell
-    int16_t A0;
-    int16x4_t A1;
-    int16x4_t A2;
-
+    int16_t A0[] = {M0[0], M0[1], M0[2], 1, 0, 0};
+    int16_t A1[] = {M1[0], M1[1], M1[2], 0, 1, 0};
+    int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
+    
     // Starting the augmented matrix
     A0 = M0[0];
     printf("M: %i\n",  M0[0]);
