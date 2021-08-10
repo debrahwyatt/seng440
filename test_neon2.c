@@ -14,7 +14,7 @@ void main(){
     int16x6_t A2;
 
     // Starting the augmented matrix
-    A0 = M0[0]
+    A0 = M0[0];
     printf("M: %i\n",  M0[0]);
 
     // int16x4_t b = {1, 2, 3 ,4 };
