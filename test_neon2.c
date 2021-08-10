@@ -9,7 +9,7 @@ void main(){
     int16_t M2[] = {7, 8, 9};
 
     //The augmented matrix shell
-    int16x4_t A0;
+    int16_t A0;
     int16x4_t A1;
     int16x4_t A2;
 
