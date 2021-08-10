@@ -5,6 +5,8 @@ void main(){
     
     //Program variables
     unsigned char i = 0;
+    unsigned char j = 0;
+    unsigned char k = 0;
 
     // The starting matrix
     int16_t M0[] = {1, 2, 3};
@@ -49,6 +51,20 @@ void main(){
     printf("\n");
     printf("\n");
 
+    //Perform the pivot
+    // for(k = 0; k < order; k++){
+    //     first_op = augmented_matrix[k][k];
+
+    //     for(i = 0; i < order ; i++){ 
+    //         second_op = augmented_matrix[i][k];
+
+    //         for(j = 0; j < 2*order; j++){
+    //             if(i != k){
+    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[k][j];
+    //             }
+    //         }
+    //     } 
+    // }
 
 
     // int16x4_t b = {1, 2, 3 ,4 };
