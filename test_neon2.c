@@ -14,17 +14,19 @@ void main(){
     int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
 
     //Print the starting matrix
-    for(int i = 0; i < 3; i++){
+    printf("\n");
+    for(char i = 0; i < 3; i++){
         printf("%i ",  M0[i]);
     }
     printf("\n");
-    for(int i = 0; i < 3; i++){
+    for(char i = 0; i < 3; i++){
         printf("%i ",  M1[i]);
     }
     printf("\n");
-    for(int i = 0; i < 3; i++){
+    for(char i = 0; i < 3; i++){
         printf("%i ",  M2[i]);
     }
+    printf("\n");
     printf("\n");
 
 
