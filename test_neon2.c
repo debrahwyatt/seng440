@@ -16,6 +16,21 @@ void main(){
     // Starting the augmented matrix
     printf("M: %i\n",  M0[0]);
 
+    //Print the starting matrix
+    for(int i = 0; i < 3; i++){
+        printf("M: %i",  M0[i]);
+    }
+    printf("\n");
+    for(int i = 0; i < 3; i++){
+        printf("M: %i",  M1[i]);
+    }
+    printf("\n");
+    for(int i = 0; i < 3; i++){
+        printf("M: %i",  M2[i]);
+    }
+    printf("\n");
+
+
     // int16x4_t b = {1, 2, 3 ,4 };
     // int16x4_t d = {2,2,2,2};
     // int16x4_t e = {3,3,3,3};
