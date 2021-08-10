@@ -8,11 +8,6 @@ void main(){
     int16_t M1[] = {4, 5, 6};
     int16_t M2[] = {7, 8, 9};
 
-    //The augmented matrix shell
-    int16_t A0[] = {M0[0], M0[1], M0[2], 1, 0, 0};
-    int16_t A1[] = {M1[0], M1[1], M1[2], 0, 1, 0};
-    int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
-
     //Print the starting matrix
     printf("\n");
     for(char i = 0; i < 3; i++){
@@ -29,6 +24,27 @@ void main(){
     printf("\n");
     printf("\n");
 
+
+    //The augmented matrix shell
+    int16_t A0[] = {M0[0], M0[1], M0[2], 1, 0, 0};
+    int16_t A1[] = {M1[0], M1[1], M1[2], 0, 1, 0};
+    int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
+
+    //Print the augmented matrix shell
+    printf("\n");
+    for(char i = 0; i < 6; i++){
+        printf("%i ",  M0[i]);
+    }
+    printf("\n");
+    for(char i = 0; i < 6; i++){
+        printf("%i ",  M1[i]);
+    }
+    printf("\n");
+    for(char i = 0; i < 6; i++){
+        printf("%i ",  M2[i]);
+    }
+    printf("\n");
+    printf("\n");
 
     // int16x4_t b = {1, 2, 3 ,4 };
     // int16x4_t d = {2,2,2,2};
