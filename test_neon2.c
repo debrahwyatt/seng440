@@ -20,11 +20,11 @@ void main(){
     printf("\n");
     for(i = 0; i < N; i++){
         for(j = 0; j < N; j++){
-            printf("%i ",  M0[i*N + j]);
+            printf("%i ",  M[i*N + j]);
         }
         printf("\n");
     }
-    
+
     // printf("\n");
     // for(i = 0; i < 3; i++){
     //     printf("%i ",  M1[i]);
