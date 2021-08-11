@@ -34,11 +34,12 @@ void main(){
         }
         printf("\n");
     }
-
-    // int16_t first_op;
-    // int16_t second_op;  
+    printf("\n");
 
     //Perform the pivot
+    int16_t first_op;
+    int16_t second_op;  
+
     // for(k = 0; k < order; k++){
     //     first_op = augmented_matrix[k][k];
 
