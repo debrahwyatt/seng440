@@ -51,6 +51,9 @@ void main(){
     printf("\n");
     printf("\n");
 
+    int16_t first_op;
+    int16_t second_op;  
+
     //Perform the pivot
     // for(k = 0; k < order; k++){
     //     first_op = augmented_matrix[k][k];
