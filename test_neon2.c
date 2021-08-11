@@ -9,12 +9,10 @@ void main(){
     unsigned char k = 0;
 
     // The starting matrix
+    unsigned char N = 2;    
     int16_t M[] = {1, 2, 3, 4};
     // [1,2]
     // [3,4]
-   
-    //The length of the matrix
-    unsigned char N = 2;
     
     //Print the starting matrix
     printf("\n");
@@ -25,38 +23,16 @@ void main(){
         printf("\n");
     }
 
-    // printf("\n");
-    // for(i = 0; i < 3; i++){
-    //     printf("%i ",  M1[i]);
-    // }
-    // printf("\n");
-    // for(i = 0; i < 3; i++){
-    //     printf("%i ",  M2[i]);
-    // }
-    // printf("\n");
-    // printf("\n");
-
-
     //The augmented matrix shell
-    // int16_t A0[] = {M0[0], M0[1], M0[2], 1, 0, 0};
-    // int16_t A1[] = {M1[0], M1[1], M1[2], 0, 1, 0};
-    // int16_t A2[] = {M2[0], M2[1], M2[2], 0, 0, 1};
-
-    //Print the augmented matrix shell
-    // printf("\n");
-    // for(i = 0; i < 6; i++){
-    //     printf("%i ",  A0[i]);
-    // }
-    // printf("\n");
-    // for(i = 0; i < 6; i++){
-    //     printf("%i ",  A1[i]);
-    // }
-    // printf("\n");
-    // for(i = 0; i < 6; i++){
-    //     printf("%i ",  A2[i]);
-    // }
-    // printf("\n");
-    // printf("\n");
+    int16_t A[] = { M[0], M[1], 1, 0, M[2], M[3], 0, 1 };
+    
+    printf("\n");
+    for(i = 0; i < N; i++){
+        for(j = 0; j < N; j++){
+            printf("%i ",  A[i*N + j]);
+        }
+        printf("\n");
+    }
 
     // int16_t first_op;
     // int16_t second_op;  
