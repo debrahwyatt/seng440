@@ -10,7 +10,7 @@ void main(){
 
     // The starting matrix
     unsigned char N = 2;    
-    int16_t M[] = {1, 2, 3, 4};
+    int16_t m[] = {1, 2, 3, 4};
     // [1,2]
     // [3,4]
     
@@ -18,17 +18,18 @@ void main(){
     printf("\n");
     for(i = 0; i < N; i++){
         for(j = 0; j < N; j++){
-            printf("%i ",  M[i*N + j]);
+            printf("%i ",  m[i*N + j]);
         }
         printf("\n");
     }
 
     //The augmented matrix shell
-    int16_t A[] = { M[0], M[1], 1, 0, M[2], M[3], 0, 1 };
-    
+    int16_t A[] = { m[0], m[1], 1, 0, m[2], m[3], 0, 1 };
+    unsigned char M = 4;    
+
     printf("\n");
     for(i = 0; i < N; i++){
-        for(j = 0; j < N; j++){
+        for(j = 0; j < M; j++){
             printf("%i ",  A[i*N + j]);
         }
         printf("\n");
