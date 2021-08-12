@@ -43,7 +43,7 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
 
-    printMatrix( A, i, j);
+    printMatrix( A, n, m, i, j );
 
 
     //Prints the Augmented Matrix
