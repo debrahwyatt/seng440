@@ -10,7 +10,7 @@ void main(){
 
     // The starting matrix
     unsigned char n = 2;    
-    int16_t M[] = {1, 2, 3, 4};
+    int16_t M[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     // [1,2]
     // [3,4]
     
@@ -25,7 +25,7 @@ void main(){
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
-    int16_t A[] = { M[0], M[1], 1, 0, M[2], M[3], 0, 1 };
+    int16_t A[] = { M[0], M[1], M[2], 1, 0, 0, M[3], M[4], M[5], 0, 1, 0, M[6], M[7], M[8] };
     unsigned char m = 4;    
 
     printf("\n");
