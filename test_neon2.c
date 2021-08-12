@@ -1,5 +1,26 @@
 #include <stdio.h>
 #include "arm_neon.h"
+// void printMatrix(short (*)[], unsigned char row, unsigned char col);
+
+//prints a matrix to terminal
+void printMatrix(int16_t *M, unsigned char i, unsigned char j) {
+    
+    // //increment variables
+    // unsigned short x;
+    // unsigned short y;
+
+    // printf("Size of Matrix is: %dx%d\n", row, col);
+
+    // for(x=0; x<row; x++){
+    //     for(y=0; y<col; y++){
+    //         printf("[%d]", matrix[x][y]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
+    // printf("[%d]", matrix[1][0]);
+
+}
 
 void main(){
     
@@ -35,6 +56,7 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
 
+    //Prints the Augmented Matrix
     printf("\n");
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
