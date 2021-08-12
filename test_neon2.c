@@ -33,7 +33,7 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
 }
 
 //prints a matrix to terminal
-int16_t initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
+void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     
     int16_t B[18];
 
@@ -51,7 +51,6 @@ int16_t initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
             }
         }
     }
-    return *B;
 }
 
 
@@ -85,23 +84,23 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
     
-    int16_t B[18];
+    int16_t A[18];
 
-    //Basic for loop
-    for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            if( j < n ){
-                B[ i*m + j ] = M[ i*n + j ];
-            }
-            else if(j-n == i){
-                B[ i*m + j ] = 1;
-            }
-            else{
-                B[ i*m + j ] = 0;
-            }
-        }
-    }
-    int16_t C = initializeAugmentation( M, m, i, j );
+    //Initialize Augmentation
+    // for(i = 0; i < n; i++){
+    //     for(j = 0; j < m; j++){
+    //         if( j < n ){
+    //             B[ i*m + j ] = M[ i*n + j ];
+    //         }
+    //         else if(j-n == i){
+    //             B[ i*m + j ] = 1;
+    //         }
+    //         else{
+    //             B[ i*m + j ] = 0;
+    //         }
+    //     }
+    // }
+    initializeAugmentation( A, M, m, i, j );
     
     // // Sets up the matrix adjacent to an identity matrix
     // for(i = 0; i < order; i++){
