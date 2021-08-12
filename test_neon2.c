@@ -101,7 +101,7 @@ void main(){
             }
         }
     }
-    printMatrix( B, m, i, j );
+    int16_t B[] = initializeAugmentation( M, m, i, j );
     
     // // Sets up the matrix adjacent to an identity matrix
     // for(i = 0; i < order; i++){
