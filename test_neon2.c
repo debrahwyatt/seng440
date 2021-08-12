@@ -64,9 +64,9 @@ void main(){
 
     //Starting matrix
     int16_t M[] = {
-        1, 2, 3, 
-        4, 5, 6, 
-        7, 8, 9
+        3, 2, -4, 
+        2, 3, 3, 
+        5, -3, 1
     };
     
     // Print the starting matrix
