@@ -102,7 +102,7 @@ void main(){
     }
 
 
-    int64_t x;
+    int64_t x = 9223372036854775800;
 
 
     // for(k = 0; k < order; k++){
