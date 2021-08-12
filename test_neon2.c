@@ -83,21 +83,22 @@ void main(){
       ////////////////////
      ///     PIVOT    ///
     ////////////////////
+    
+    uint8_t first_op;
+    uint8_t second_op;    
 
-    // uint8_t m;
+    for(k = 0; k < n; k++){
+        first_op = A[ k*m + k ];
 
-    // for(m = 0; m < order; m++){
-    //     first_op = augmented_matrix[m][m];
+        for(i = 0; i < n ; i++){ 
+            second_op = A[ i*m + k ];
 
-    //     for(i = 0; i < order ; i++){ 
-    //         second_op = augmented_matrix[i][m];
-
-    //         for(j = 0; j < 2*order; j++){
-    //             if(i != m){
-    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
-    //             }
-    //         }
-    //     } 
-    // }
+            for(j = 0; j < m; j++){
+                if(i != k){
+                    A[ i*m + j ] = first_op*A[ i*m + j ] - second_op*A[ k*m + j];
+                }
+            }
+        } 
+    }
 
 }
