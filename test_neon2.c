@@ -6,12 +6,6 @@
 unsigned char n = 3;   
 unsigned char m = 6;    
 
-int16_t M[] = {
-    1, 2, 3, 
-    4, 5, 6, 
-    7, 8, 9
-};
-
 //prints a matrix to terminal
 void printMatrix(int16_t *M, unsigned char i, unsigned char j) {
     
@@ -32,16 +26,14 @@ void main(){
     unsigned char j = 0;
     unsigned char k = 0;
 
-    printMatrix( M, i, j);
+    //Starting Matrix
+    int16_t M[] = {
+        1, 2, 3, 
+        4, 5, 6, 
+        7, 8, 9
+    };
 
-    //Print the starting matrix
-    printf("\n");
-    for(i = 0; i < n; i++){
-        for(j = 0; j < n; j++){
-            printf("%i ",  M[i*n + j]);
-        }
-        printf("\n");
-    }
+    printMatrix( M, i, j);
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
