@@ -20,7 +20,7 @@ unsigned char m = n * 2;
 ////////////////////
 
 //prints a matrix to terminal
-void printMatrix( int16_t *M, unsigned char n, unsigned char m, unsigned char i, unsigned char j ) {
+void printMatrix( int16_t *M, unsigned char m, unsigned char i, unsigned char j ) {
     
     //Print the starting matrix
     for(i = 0; i < n; i++){
@@ -50,7 +50,7 @@ void main(){
         7, 8, 9
     };
 
-    printMatrix( M, n, n, i, j );
+    printMatrix( M, n, i, j );
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
@@ -89,7 +89,7 @@ void main(){
 
 
     //Prints the augmented matrix
-    printMatrix( A, n, m, i, j );
+    printMatrix( A, m, i, j );
 
     //Perform the pivot
     int16_t first_op;
