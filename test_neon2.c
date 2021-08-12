@@ -71,6 +71,9 @@ void main(){
             if( j < n ){
                 B[ i*m + j ] = A[i*n];
             }
+            else{
+                B[ i*m + j ] = 0;
+            }
 
             // printf("%i ",  M[i*m + j]);
         }
@@ -96,6 +99,7 @@ void main(){
     //     }
     // }
 
+    printf("\n");
 
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
