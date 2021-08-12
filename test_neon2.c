@@ -49,7 +49,9 @@ void main(){
         4, 5, 6, 
         7, 8, 9
     };
-
+    
+    // Print the starting matrix
+    printf("\n");
     printMatrix( M, n, i, j );
 
     //The augmented matrix shell
@@ -66,7 +68,7 @@ void main(){
 
             // printf("%i ",  M[i*m + j]);
         }
-        printf("\n");
+        // printf("\n");
     }
 
 
