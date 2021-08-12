@@ -62,6 +62,8 @@ void main(){
         M[3], M[4], M[5], 0, 1, 0, 
         M[6], M[7], M[8], 0, 0, 1 
     };
+    
+    int16_t B[18];
 
     //Basic for loop
     for(i = 0; i < n; i++){
