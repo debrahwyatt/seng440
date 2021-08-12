@@ -84,14 +84,14 @@ void main(){
      ///     PIVOT    ///
     ////////////////////
     
-    uint8_t first_op;
-    uint8_t second_op;    
+    int16_t first_op;
+    int16_t second_op;    
 
     for(k = 0; k < n; k++){
-        first_op = A[ k*n + k ];
+        first_op = A[ k*m + k ];
 
         for(i = 0; i < n ; i++){ 
-            second_op = A[ i*n + k ];
+            second_op = A[ i*m + k ];
 
             for(j = 0; j < m; j++){
                 if(i != k){
