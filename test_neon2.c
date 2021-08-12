@@ -91,7 +91,7 @@ void main(){
         first_op = A[ k*n + k ];
 
         for(i = 0; i < n ; i++){ 
-            second_op = A[ i*m + k ];
+            second_op = A[ i*n + k ];
 
             for(j = 0; j < m; j++){
                 if(i != k){
