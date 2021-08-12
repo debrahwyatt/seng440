@@ -72,7 +72,7 @@ void main(){
     printMatrix( M, n, i, j );
 
     //The augmented matrix shell
-    int16_t A[18];
+    int16_t A[n*m];
     initializeAugmentation( A, M, m, i, j );
 
     //Prints the augmented matrix
