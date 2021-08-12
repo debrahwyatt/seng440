@@ -101,6 +101,9 @@ void main(){
         } 
     }
 
+    
+    int32_t x;
+
 
     // for(k = 0; k < order; k++){
     //     first_op = augmented_matrix[k][k];
@@ -113,7 +116,7 @@ void main(){
     //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[k][j];
     //             }
     //         }
-    //     } 
+    //     }
     // }
 
 
