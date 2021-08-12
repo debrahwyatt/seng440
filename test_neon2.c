@@ -27,7 +27,7 @@ void main(){
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
-    int16_t A[] = { M[0], M[1], M[2], 1, 0, 0, M[3], M[4], M[5], 0, 1, 0, M[6], M[7], M[8] };
+    int16_t A[] = { M[0], M[1], M[2], 1, 0, 0, M[3], M[4], M[5], 0, 1, 0, M[6], M[7], M[8], 0, 0, 1 };
 
     printf("\n");
     for(i = 0; i < n; i++){
