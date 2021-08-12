@@ -79,7 +79,7 @@ void main(){
         }
         // printf("\n");
     }
-    // printMatrix( B, m, i, j );
+    printMatrix( B, m, i, j );
     
     // // Sets up the matrix adjacent to an identity matrix
     // for(i = 0; i < order; i++){
@@ -104,8 +104,8 @@ void main(){
     printMatrix( A, m, i, j );
 
     //Perform the pivot
-    int16_t first_op;
-    int16_t second_op;
+    // int16_t first_op;
+    // int16_t second_op;
 
 
 
