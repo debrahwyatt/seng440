@@ -88,7 +88,7 @@ void main(){
     uint8_t second_op;    
 
     for(k = 0; k < n; k++){
-        first_op = A[ k*m + k ];
+        first_op = A[ k*n + k ];
 
         for(i = 0; i < n ; i++){ 
             second_op = A[ i*m + k ];
