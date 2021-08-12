@@ -43,6 +43,9 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
 
+    printMatrix( A, i, j);
+
+
     //Prints the Augmented Matrix
     printf("\n");
     for(i = 0; i < n; i++){
