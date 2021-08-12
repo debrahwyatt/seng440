@@ -2,24 +2,27 @@
 #include "arm_neon.h"
 // void printMatrix(short (*)[], unsigned char row, unsigned char col);
 
+// Matrix dimentions
+unsigned char n = 3;   
+unsigned char m = 6;    
+
+int16_t M[] = {
+    1, 2, 3, 
+    4, 5, 6, 
+    7, 8, 9
+};
+
 //prints a matrix to terminal
 void printMatrix(int16_t *M, unsigned char i, unsigned char j) {
     
-    // //increment variables
-    // unsigned short x;
-    // unsigned short y;
-
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-
-    // for(x=0; x<row; x++){
-    //     for(y=0; y<col; y++){
-    //         printf("[%d]", matrix[x][y]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    // printf("[%d]", matrix[1][0]);
-
+    //Print the starting matrix
+    printf("\n");
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++){
+            printf("%i ",  M[i*n + j]);
+        }
+        printf("\n");
+    }
 }
 
 void main(){
@@ -29,16 +32,8 @@ void main(){
     unsigned char j = 0;
     unsigned char k = 0;
 
-    // Matrix dimentions
-    unsigned char n = 3;   
-    unsigned char m = 6;    
- 
-    int16_t M[] = {
-        1, 2, 3, 
-        4, 5, 6, 
-        7, 8, 9
-    };
-    
+    printMatrix( *M, i, j);
+
     //Print the starting matrix
     printf("\n");
     for(i = 0; i < n; i++){
