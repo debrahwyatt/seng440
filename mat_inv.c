@@ -64,14 +64,13 @@ void pivot(){
     for(int m = 0; m < order; m++){
         first_op = augmented_matrix[m][m];
         for(int i = 0; i < order ; i++){ 
-        second_op = augmented_matrix[i][m];
-        for(int j = 0; j < 2*order; j++){
-            if(i != m){
-                augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
+            second_op = augmented_matrix[i][m];
+            for(int j = 0; j < 2*order; j++){
+                if(i != m){
+                  augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
+                }
             }
-        }
-    } 
-
+        } 
     }
      for(int i = 0; i < order ; i++){ 
         for(int j = order; j < 2*order; j++){
