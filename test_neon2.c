@@ -12,7 +12,7 @@
 
 // Matrix dimentions
 #define n 3
-uint8_t m = n * 2;    
+#define m = n * 2;    
 
 
   ////////////////////
@@ -21,8 +21,6 @@ uint8_t m = n * 2;
 
 //prints a matrix to terminal
 void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
-    
-    //Print the starting matrix
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             printf("%i ",  M[i*m + j]);
@@ -34,7 +32,6 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
 
 //The first step in Augmentation
 void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
-    
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
@@ -101,8 +98,6 @@ void main(){
         } 
     }
 
-
-    int64_t x = 9223372036854775800;
 
 
     // for(k = 0; k < order; k++){
