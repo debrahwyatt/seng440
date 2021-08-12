@@ -29,6 +29,7 @@ void printMatrix( int16_t *M, unsigned char m, unsigned char i, unsigned char j 
         }
         printf("\n");
     }
+    printf("\n");
 }
 
 
