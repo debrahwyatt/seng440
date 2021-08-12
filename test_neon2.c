@@ -12,9 +12,11 @@ void main(){
     unsigned char n = 3;   
     unsigned char m = 6;    
  
-    int16_t M[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    // [1,2]
-    // [3,4]
+    int16_t M[] = {
+        1, 2, 3, 
+        4, 5, 6, 
+        7, 8, 9
+    };
     
     //Print the starting matrix
     printf("\n");
@@ -27,7 +29,11 @@ void main(){
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
-    int16_t A[] = { M[0], M[1], M[2], 1, 0, 0, M[3], M[4], M[5], 0, 1, 0, M[6], M[7], M[8], 0, 0, 1 };
+    int16_t A[] = { 
+        M[0], M[1], M[2], 1, 0, 0, 
+        M[3], M[4], M[5], 0, 1, 0, 
+        M[6], M[7], M[8], 0, 0, 1 
+    };
 
     printf("\n");
     for(i = 0; i < n; i++){
@@ -40,7 +46,7 @@ void main(){
 
     //Perform the pivot
     int16_t first_op;
-    int16_t second_op;  
+    int16_t second_op;
 
     // for(k = 0; k < order; k++){
     //     first_op = augmented_matrix[k][k];
