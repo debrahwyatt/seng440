@@ -69,7 +69,7 @@ void main(){
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
-                B[ i*m + j ] = A[ i*n + j ];
+                B[ i*m + j ] = M[ i*n + j ];
             }
             else{
                 B[ i*m + j ] = 0;
