@@ -66,6 +66,9 @@ void main(){
     //Basic for loop
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
+            if( j < n ){
+                B[ i*m + j ] = A[i*n];
+            }
 
             // printf("%i ",  M[i*m + j]);
         }
