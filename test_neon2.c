@@ -32,7 +32,7 @@ void main(){
     unsigned char j = 0;
     unsigned char k = 0;
 
-    printMatrix( *M, i, j);
+    printMatrix( M, i, j);
 
     //Print the starting matrix
     printf("\n");
