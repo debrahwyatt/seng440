@@ -32,10 +32,9 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     printf("\n");
 }
 
-//prints a matrix to terminal
+//The first step in Augmentation
 void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     
-    //Basic for loop
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
@@ -75,58 +74,12 @@ void main(){
     printMatrix( M, n, i, j );
 
     //The augmented matrix shell
-    //PROCESS NEEDS AUTOMATION
-    // int16_t A[] = { 
-    //     M[0], M[1], M[2], 1, 0, 0, 
-    //     M[3], M[4], M[5], 0, 1, 0, 
-    //     M[6], M[7], M[8], 0, 0, 1 
-    // };
-    
     int16_t A[18];
-
-    //Initialize Augmentation
-    // for(i = 0; i < n; i++){
-    //     for(j = 0; j < m; j++){
-    //         if( j < n ){
-    //             B[ i*m + j ] = M[ i*n + j ];
-    //         }
-    //         else if(j-n == i){
-    //             B[ i*m + j ] = 1;
-    //         }
-    //         else{
-    //             B[ i*m + j ] = 0;
-    //         }
-    //     }
-    // }
     initializeAugmentation( A, M, m, i, j );
-    
-    // // Sets up the matrix adjacent to an identity matrix
-    // for(i = 0; i < order; i++){
-    //     for(j = 0; j < order*2; j++){
-    //         if( (i < order) && (j < order) ){
-    //             augmented_matrix[i][j] = matrix[i][j];
-    //         }
-    //         else if(i == mat_i && j == mat_j) {
-    //            augmented_matrix[i][j] = 1;
-    //            mat_i++;
-    //            mat_j++;
-    //         }
-    //         else{
-    //             augmented_matrix[i][j] = 0;
-    //         }
-    //     }
-    // }
-
-    printf("\n");
 
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
 
     //Perform the pivot
-    // int16_t first_op;
-    // int16_t second_op;
-
-
-
 
 }
