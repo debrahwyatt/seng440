@@ -71,7 +71,7 @@ void main(){
             if( j < n ){
                 B[ i*m + j ] = M[ i*n + j ];
             }
-            else if((j >= n) && (j-n == i)){
+            else if(j-n == i){
                 B[ i*m + j ] = 1;
             }
             else{
