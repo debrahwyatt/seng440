@@ -76,6 +76,7 @@ void main(){
         }
         // printf("\n");
     }
+    printMatrix( B, m, i, j );
 
 
     // // Sets up the matrix adjacent to an identity matrix
