@@ -32,6 +32,28 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     printf("\n");
 }
 
+//prints a matrix to terminal
+int16_t * initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
+    
+    int16_t B[18];
+
+    //Basic for loop
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            if( j < n ){
+                B[ i*m + j ] = M[ i*n + j ];
+            }
+            else if(j-n == i){
+                B[ i*m + j ] = 1;
+            }
+            else{
+                B[ i*m + j ] = 0;
+            }
+        }
+    }
+    return B;
+}
+
 
   ////////////////////
  /// PROGRAM MAIN ///
@@ -77,10 +99,7 @@ void main(){
             else{
                 B[ i*m + j ] = 0;
             }
-
-            // printf("%i ",  M[i*m + j]);
         }
-        // printf("\n");
     }
     printMatrix( B, m, i, j );
     
