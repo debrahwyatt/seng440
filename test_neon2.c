@@ -11,7 +11,7 @@
 ////////////////////////
 
 // Matrix dimentions
-unsigned char n = 3;   
+#define n 3
 unsigned char m = n * 2;    
 
 
