@@ -35,19 +35,17 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
 //prints a matrix to terminal
 void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     
-    int16_t B[18];
-
     //Basic for loop
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
-                B[ i*m + j ] = M[ i*n + j ];
+                A[ i*m + j ] = M[ i*n + j ];
             }
             else if(j-n == i){
-                B[ i*m + j ] = 1;
+                A[ i*m + j ] = 1;
             }
             else{
-                B[ i*m + j ] = 0;
+                A[ i*m + j ] = 0;
             }
         }
     }
