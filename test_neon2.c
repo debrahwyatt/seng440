@@ -12,7 +12,7 @@
 
 // Matrix dimentions
 #define n 3
-unsigned char m = n * 2;    
+uint8_t m = n * 2;    
 
 
   ////////////////////
@@ -20,7 +20,7 @@ unsigned char m = n * 2;
 ////////////////////
 
 //prints a matrix to terminal
-void printMatrix( int16_t *M, unsigned char m, unsigned char i, unsigned char j ) {
+void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     
     //Print the starting matrix
     for(i = 0; i < n; i++){
@@ -40,9 +40,9 @@ void printMatrix( int16_t *M, unsigned char m, unsigned char i, unsigned char j 
 void main(){
 
     //Program variables
-    unsigned char i = 0;
-    unsigned char j = 0;
-    unsigned char k = 0;
+    uint8_t i = 0;
+    uint8_t j = 0;
+    uint8_t k = 0;
 
     //Starting matrix
     int16_t M[] = {
@@ -81,9 +81,6 @@ void main(){
     }
     // printMatrix( B, m, i, j );
     
-    int8_t x = 8;
-    printf("%i", x);
-
     // // Sets up the matrix adjacent to an identity matrix
     // for(i = 0; i < order; i++){
     //     for(j = 0; j < order*2; j++){
