@@ -100,7 +100,23 @@ void main(){
             }
         } 
     }
-    
+
+
+    // for(k = 0; k < order; k++){
+    //     first_op = augmented_matrix[k][k];
+
+    //     for(i = 0; i < order ; i++){ 
+    //         second_op = augmented_matrix[i][k];
+
+    //         for(j = 0; j < 2*order; j++){
+    //             if(i != k){
+    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[k][j];
+    //             }
+    //         }
+    //     } 
+    // }
+
+
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
 }
