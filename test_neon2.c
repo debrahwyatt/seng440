@@ -1,3 +1,7 @@
+  /////////////////////
+ ///    HEADERS    ///
+/////////////////////
+
 #include <stdio.h>
 #include "arm_neon.h"
 
@@ -8,14 +12,15 @@
 
 // Matrix dimentions
 unsigned char n = 3;   
-unsigned char m = 6;    
+unsigned char m = n * 2;    
 
 
   ////////////////////
  ///   FUNCTIONS  ///
 ////////////////////
+
 //prints a matrix to terminal
-void printMatrix(int16_t *M, unsigned char n, unsigned char m, unsigned char i, unsigned char j ) {
+void printMatrix( int16_t *M, unsigned char n, unsigned char m, unsigned char i, unsigned char j ) {
     
     //Print the starting matrix
     for(i = 0; i < n; i++){
@@ -30,6 +35,7 @@ void printMatrix(int16_t *M, unsigned char n, unsigned char m, unsigned char i, 
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
+
 void main(){
 
     //Program variables
@@ -44,7 +50,7 @@ void main(){
         7, 8, 9
     };
 
-    printMatrix( M, n, n, i, j);
+    printMatrix( M, n, n, i, j );
 
     //The augmented matrix shell
     //PROCESS NEEDS AUTOMATION
@@ -54,6 +60,34 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
 
+    //Basic for loop
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+
+            // printf("%i ",  M[i*m + j]);
+        }
+        printf("\n");
+    }
+
+
+    // // Sets up the matrix adjacent to an identity matrix
+    // for(i = 0; i < order; i++){
+    //     for(j = 0; j < order*2; j++){
+    //         if( (i < order) && (j < order) ){
+    //             augmented_matrix[i][j] = matrix[i][j];
+    //         }
+    //         else if(i == mat_i && j == mat_j) {
+    //            augmented_matrix[i][j] = 1;
+    //            mat_i++;
+    //            mat_j++;
+    //         }
+    //         else{
+    //             augmented_matrix[i][j] = 0;
+    //         }
+    //     }
+    // }
+
+
     //Prints the augmented matrix
     printMatrix( A, n, m, i, j );
 
@@ -62,56 +96,6 @@ void main(){
     int16_t second_op;
 
 
-    // for(k = 0; k < order; k++){
-    //     first_op = augmented_matrix[k][k];
-
-    //     for(i = 0; i < order ; i++){ 
-    //         second_op = augmented_matrix[i][k];
-
-    //         for(j = 0; j < 2*order; j++){
-    //             if(i != k){
-    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[k][j];
-    //             }
-    //         }
-    //     } 
-    // }
 
 
-    // int16_t B[] = {1, 2, 1, 0, 3, 4, 0, 1};
-
-    // int16x4_t B0;
-    // int16x4_t B1;
-
-    // int16x4_t b = {1, 2, 3 ,4 };
-    // int16x4_t d = {2,2,2,2};
-    // int16x4_t e = {3,3,3,3};
-
-    // rows of the augmented matrix b
-   // printf("A: \n", *A);
-
-    // int16_t C[] = {0, 0, 0, 0, 0 ,0 ,0, 0};
-
-  //  int16x4_t f;
-
-    //vmls_s16
-    /*
-        multiply subtract operation
-    */
-
-    // B0 = vld1_s16(B);
-    // B1 = vld1_s16(B+4);
-
-    // vst1_s16(C, B0);
-    // vst1_s16(C+4, B1);
-
-    // int16x4_t f = vmls_s16(b,d,e); // v3, v1, v2 = v3 - v1 * v2
-
-    // int16_t M[] = {0, 0, 0, 0};
-    // vst1_s16(M, f);
-    // vst1_s16(C, B0);
-    // vst1_s16(C+4, B1);
-
-    // for(int i = 0; i < 4; i++){
-    //     printf("M: %i\n",  M[i]);
-    // }
 }
