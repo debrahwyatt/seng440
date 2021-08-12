@@ -12,7 +12,7 @@
 
 // Matrix dimentions
 #define n 3
-#define m 2*n
+#define m 6
 // uint8_t m = n * 2;    
 
 
