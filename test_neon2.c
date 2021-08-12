@@ -24,6 +24,7 @@ void main(){
     }
 
     //The augmented matrix shell
+    //PROCESS NEEDS AUTOMATION
     int16_t A[] = { M[0], M[1], 1, 0, M[2], M[3], 0, 1 };
     unsigned char m = 4;    
 
