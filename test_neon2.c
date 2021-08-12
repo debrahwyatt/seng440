@@ -63,7 +63,7 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
     
-    int16_t B[18];
+    int16_t B[24];
 
     //Basic for loop
     for(i = 0; i < n; i++){
