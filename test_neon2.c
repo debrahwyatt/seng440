@@ -58,9 +58,9 @@ void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8
 void main(){
 
     //Program variables
-    uint8_t i = 0;
-    uint8_t j = 0;
-    uint8_t k = 0;
+    uint8_t i;
+    uint8_t j;
+    uint8_t k;
 
     //Starting matrix
     int16_t M[] = {
@@ -80,6 +80,24 @@ void main(){
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
 
-    //Perform the pivot
+      ////////////////////
+     ///     PIVOT    ///
+    ////////////////////
+
+    // uint8_t m;
+
+    // for(m = 0; m < order; m++){
+    //     first_op = augmented_matrix[m][m];
+
+    //     for(i = 0; i < order ; i++){ 
+    //         second_op = augmented_matrix[i][m];
+
+    //         for(j = 0; j < 2*order; j++){
+    //             if(i != m){
+    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
+    //             }
+    //         }
+    //     } 
+    // }
 
 }
