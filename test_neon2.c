@@ -11,7 +11,9 @@
 ////////////////////////
 
 // Matrix dimentions
-#define n 3;
+#define n 3
+#define z 6
+
 // #define m 6;
 uint8_t m = n * 2;    
 
