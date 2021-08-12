@@ -69,10 +69,10 @@ void main(){
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
-                B[ i*n + j ] = A[ i*n + j ];
+                B[ i*m + j ] = A[ i*n + j ];
             }
             else{
-                B[ i*n + j ] = 0;
+                B[ i*m + j ] = 0;
             }
 
             // printf("%i ",  M[i*m + j]);
