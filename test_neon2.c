@@ -33,7 +33,7 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
 }
 
 //prints a matrix to terminal
-int16_t * initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
+int16_t initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
     
     int16_t B[18];
 
@@ -51,7 +51,7 @@ int16_t * initializeAugmentation( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) 
             }
         }
     }
-    return B;
+    return *B;
 }
 
 
