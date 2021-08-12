@@ -122,7 +122,7 @@ void main(){
     printf("\n");
 
     //Prints the augmented matrix
-    printMatrix( C, m, i, j );
+    printMatrix( A, m, i, j );
 
     //Perform the pivot
     // int16_t first_op;
