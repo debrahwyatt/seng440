@@ -100,5 +100,7 @@ void main(){
             }
         } 
     }
-
+    
+    //Prints the augmented matrix
+    printMatrix( A, m, i, j );
 }
