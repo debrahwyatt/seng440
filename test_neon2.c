@@ -26,7 +26,7 @@ void main(){
     unsigned char j = 0;
     unsigned char k = 0;
 
-    //Starting Matrix
+    //Starting matrix
     int16_t M[] = {
         1, 2, 3, 
         4, 5, 6, 
@@ -43,18 +43,8 @@ void main(){
         M[6], M[7], M[8], 0, 0, 1 
     };
 
+    //Prints the augmented matrix
     printMatrix( A, n, m, i, j );
-
-
-    //Prints the Augmented Matrix
-    printf("\n");
-    for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            printf("%i ",  A[i*m + j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
 
     //Perform the pivot
     int16_t first_op;
