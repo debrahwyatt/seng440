@@ -79,8 +79,10 @@ void main(){
         }
         // printf("\n");
     }
-    printMatrix( B, m, i, j );
-
+    // printMatrix( B, m, i, j );
+    
+    int8_t x = 8;
+    printf(x);
 
     // // Sets up the matrix adjacent to an identity matrix
     // for(i = 0; i < order; i++){
