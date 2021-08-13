@@ -107,7 +107,7 @@ void main(){
     //Augment the matrix
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
-    printMatrix( A, m, i, j );
+    // printMatrix( A, m, i, j );
 
     // Real -> integer
     // Integer -> real
@@ -121,7 +121,6 @@ void main(){
     //     }
     // }
 
-    
     collectInverse( I, A, m, i, j, k );
 
     //Prints the augmented matrix
