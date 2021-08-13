@@ -90,6 +90,8 @@ void main(){
     int16_t i;
     int16_t j;
     int16_t k;
+    int16_t I[9];
+    int16_t A[18];
 
     //Starting matrix
     int16_t M[] = {
@@ -103,7 +105,6 @@ void main(){
     printMatrix( M, n, i, j );
 
     //Augment the matrix
-    int16_t A[18];
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
     printMatrix( A, m, i, j );
@@ -118,16 +119,7 @@ void main(){
     //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
     //     }
     // }
-    int16_t I[9];
 
-    // collect the inverted matrix
-    // for(i = 0; i < n ; i++){ 
-    //     k = 0;
-    //     for(j = n; j < m; j++){
-    //         I[ i*n + k ] = A[ i*m + j ];
-    //         k++;
-    //     }
-    // }
     
     collectInverse( I, A, m, i, j, k )
 
