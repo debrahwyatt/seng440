@@ -127,9 +127,9 @@ void main(){
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
 
-    int16_t a = 6570;
-    int16_t b = 540;
-    int32_t c = (b / a) * 10000;
+    int16_t a = 6570 * 2^16;
+    int16_t b = 540 * 2^16;
+    int32_t c = (b / a);
 
     printf("%i \n\n", c);
 
