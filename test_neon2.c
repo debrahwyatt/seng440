@@ -34,7 +34,7 @@ void printMatrix( int16_t *M, int16_t m, int16_t i, int16_t j ) {
 
 //The first step in Augmentation
 
-void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
+void initializeAugmentation( float *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
@@ -50,7 +50,7 @@ void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16
     }
 }
 
-void pivot( int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+void pivot( float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     
     int16_t first_op;
     int16_t second_op;    
@@ -70,7 +70,7 @@ void pivot( int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     }
 }
 
-void collectInverse( int16_t *I, int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+void collectInverse( int16_t *I, float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     for(i = 0; i < n ; i++){ 
         k = 0;
         for(j = n; j < m; j++){
