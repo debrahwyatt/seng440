@@ -121,7 +121,7 @@ void main(){
     // }
 
     
-    collectInverse( I, A, m, i, j, k )
+    collectInverse( I, A, m, i, j, k );
 
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
