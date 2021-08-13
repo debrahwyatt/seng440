@@ -91,7 +91,7 @@ void main(){
     int16_t j;
     int16_t k;
     int16_t I[9];
-    int16_t A[18];
+    float A[18];
 
     //Starting matrix
     int16_t M[] = {
@@ -109,7 +109,8 @@ void main(){
     pivot( A, m, i, j, k );
     printMatrix( A, m, i, j );
 
-
+    // Real -> integer
+    // Integer -> real
       ////////////////////
      ///   DIVISION   ///
     ////////////////////
