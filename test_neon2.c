@@ -70,7 +70,7 @@ void pivot( float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     }
 }
 
-void collectInverse( int16_t *I, float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+void collectInverse( float *I, float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     for(i = 0; i < n ; i++){ 
         k = 0;
         for(j = n; j < m; j++){
@@ -90,7 +90,7 @@ void main(){
     int16_t i;
     int16_t j;
     int16_t k;
-    int16_t I[9];
+    float I[9];
     float A[18];
 
     //Starting matrix
@@ -122,7 +122,16 @@ void main(){
     }
 
     collectInverse( I, A, m, i, j, k );
+    
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++){
+            printf("%i ",  I[i*n + j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    
 
     //Prints the augmented matrix
-    printMatrix( I, n, i, j );
+    // printMatrix( I, n, i, j );
 }
