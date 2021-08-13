@@ -34,7 +34,7 @@ void printMatrix( int16_t *M, int16_t m, int16_t i, int16_t j ) {
 
 //The first step in Augmentation
 
-void initializeAugmentation( float *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
+void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
@@ -50,7 +50,7 @@ void initializeAugmentation( float *A, int16_t *M, int16_t m, int16_t i, int16_t
     }
 }
 
-void pivot( float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+void pivot( int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     
     int16_t first_op;
     int16_t second_op;    
@@ -70,7 +70,7 @@ void pivot( float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     }
 }
 
-void collectInverse( float *I, float *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+void collectInverse( int16_t *I, int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     for(i = 0; i < n ; i++){ 
         k = 0;
         for(j = n; j < m; j++){
@@ -90,8 +90,8 @@ void main(){
     int16_t i;
     int16_t j;
     int16_t k;
-    float I[9];
-    float A[18];
+    int16_t I[9];
+    int16_t A[18];
 
     //Starting matrix
     int16_t M[] = {
@@ -107,33 +107,23 @@ void main(){
     //Augment the matrix
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
-    // printMatrix( A, m, i, j );
+    printMatrix( A, m, i, j );
 
-    for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            printf("%i ",  A[i*m + j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    
     // Real -> integer
     // Integer -> real
       ////////////////////
      ///   DIVISION   ///
     ////////////////////
 
-    for(i = 0; i < n ; i++){ 
-        for(j = n; j < m; j++){
-            A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
-        }
-    }
+    // for(i = 0; i < n ; i++){ 
+    //     for(j = n; j < m; j++){
+    //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
+    //     }
+    // }
 
+    
     collectInverse( I, A, m, i, j, k );
-    
-
-    
 
     //Prints the augmented matrix
-    // printMatrix( I, n, i, j );
+    printMatrix( I, n, i, j );
 }
