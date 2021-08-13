@@ -55,6 +55,25 @@ void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16
     }
 }
 
+void pivot( int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+    
+    int16_t first_op;
+    int16_t second_op;    
+
+    for(k = 0; k < n; k++){
+        first_op = A[ k*m + k ];
+
+        for(i = 0; i < n ; i++){ 
+            second_op = A[ i*m + k ];
+
+            for(j = 0; j < m; j++){
+                if(i != k){
+                    A[ i*m + j ] = first_op*A[ i*m + j ] - second_op*A[ k*m + j];
+                }
+            }
+        } 
+    }
+}
 
   ////////////////////
  /// PROGRAM MAIN ///
@@ -89,22 +108,23 @@ void main(){
      ///     PIVOT    ///
     ////////////////////
     
-    int16_t first_op;
-    int16_t second_op;    
+    // int16_t first_op;
+    // int16_t second_op;    
 
-    for(k = 0; k < n; k++){
-        first_op = A[ k*m + k ];
+    // for(k = 0; k < n; k++){
+    //     first_op = A[ k*m + k ];
 
-        for(i = 0; i < n ; i++){ 
-            second_op = A[ i*m + k ];
+    //     for(i = 0; i < n ; i++){ 
+    //         second_op = A[ i*m + k ];
 
-            for(j = 0; j < m; j++){
-                if(i != k){
-                    A[ i*m + j ] = first_op*A[ i*m + j ] - second_op*A[ k*m + j];
-                }
-            }
-        } 
-    }
+    //         for(j = 0; j < m; j++){
+    //             if(i != k){
+    //                 A[ i*m + j ] = first_op*A[ i*m + j ] - second_op*A[ k*m + j];
+    //             }
+    //         }
+    //     } 
+    // }
+    pivot( A, m, i, j, k );
 
 
 
