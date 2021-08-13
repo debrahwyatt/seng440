@@ -97,51 +97,10 @@ void main(){
     printf("\n");
     printMatrix( M, n, i, j );
 
-    //The augmented matrix shell
+    //Augment the matrix
     int16_t A[18];
     initializeAugmentation( A, M, m, i, j );
-
-    //Prints the augmented matrix
-    printMatrix( A, m, i, j );
-
-      ////////////////////
-     ///     PIVOT    ///
-    ////////////////////
-    
-    // int16_t first_op;
-    // int16_t second_op;    
-
-    // for(k = 0; k < n; k++){
-    //     first_op = A[ k*m + k ];
-
-    //     for(i = 0; i < n ; i++){ 
-    //         second_op = A[ i*m + k ];
-
-    //         for(j = 0; j < m; j++){
-    //             if(i != k){
-    //                 A[ i*m + j ] = first_op*A[ i*m + j ] - second_op*A[ k*m + j];
-    //             }
-    //         }
-    //     } 
-    // }
     pivot( A, m, i, j, k );
-
-
-
-    // for(k = 0; k < order; k++){
-    //     first_op = augmented_matrix[k][k];
-
-    //     for(i = 0; i < order ; i++){ 
-    //         second_op = augmented_matrix[i][k];
-
-    //         for(j = 0; j < 2*order; j++){
-    //             if(i != k){
-    //                 augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[k][j];
-    //             }
-    //         }
-    //     }
-    // }
-
 
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
