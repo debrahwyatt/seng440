@@ -70,6 +70,16 @@ void pivot( int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
     }
 }
 
+void collectInverse( int16_t *I, int16_t *A, int16_t m, int16_t i, int16_t j, int16_t k ) {
+    for(i = 0; i < n ; i++){ 
+        k = 0;
+        for(j = n; j < m; j++){
+            I[ i*n + k ] = A[ i*m + j ];
+            k++;
+        }
+    }
+}
+
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
@@ -111,14 +121,15 @@ void main(){
     int16_t I[9];
 
     // collect the inverted matrix
-    for(i = 0; i < n ; i++){ 
-        k = 0;
-        for(j = n; j < m; j++){
-            I[ i*n + k ] = A[ i*m + j ];
-            k++;
-        }
-    }
-
+    // for(i = 0; i < n ; i++){ 
+    //     k = 0;
+    //     for(j = n; j < m; j++){
+    //         I[ i*n + k ] = A[ i*m + j ];
+    //         k++;
+    //     }
+    // }
+    
+    collectInverse( I, A, m, i, j, k )
 
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
