@@ -131,6 +131,6 @@ void main(){
     int16_t a = 6570;
     int16_t b = 540;
 
-    printf("\n %i \n", b/a);
+    printf("%i \n\n", b/a);
 
 }
