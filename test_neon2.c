@@ -128,7 +128,9 @@ void main(){
     printMatrix( I, n, i, j );
 
 
+    int16_t a = 6570;
+    int16_t b = 540;
 
-    printf("\n");
+    printf("\n %i \n", a);
 
 }
