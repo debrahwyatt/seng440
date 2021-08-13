@@ -96,19 +96,30 @@ void main(){
     int16_t A[18];
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
+    printMatrix( A, m, i, j );
 
 
       ////////////////////
      ///   DIVISION   ///
     ////////////////////
 
+    // for(i = 0; i < n ; i++){ 
+    //     for(j = n; j < m; j++){
+    //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
+    //     }
+    // }
+    int16_t I[9];
+
+    // collect the inverted matrix
     for(i = 0; i < n ; i++){ 
+        k = 0;
         for(j = n; j < m; j++){
-            A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
+            I[ i*n + k ] = A[ i*m + j ];
+            k++;
         }
     }
 
 
     //Prints the augmented matrix
-    printMatrix( A, m, i, j );
+    printMatrix( I, n, i, j );
 }
