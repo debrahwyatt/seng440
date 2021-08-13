@@ -89,8 +89,8 @@ void main(){
      ///     PIVOT    ///
     ////////////////////
     
-    int first_op;
-    int second_op;    
+    int16_t first_op;
+    int16_t second_op;    
 
     for(k = 0; k < n; k++){
         first_op = A[ k*m + k ];
