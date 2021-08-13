@@ -127,11 +127,10 @@ void main(){
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
 
-
     int16_t a = 6570;
     int16_t b = 540;
     int32_t c = b/a;
 
-    printf("%i \n\n", c);
+    printf("%i \n\n", c*2^16);
 
 }
