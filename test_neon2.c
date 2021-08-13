@@ -23,9 +23,6 @@ uint8_t m = n * 2;
 //prints a matrix to terminal
 
 void printMatrix( int16_t *M, int16_t m, int16_t i, int16_t j ) {
-    
-    //Print the starting matrix
-
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             printf("%i ",  M[i*m + j]);
@@ -38,8 +35,6 @@ void printMatrix( int16_t *M, int16_t m, int16_t i, int16_t j ) {
 //The first step in Augmentation
 
 void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
-    
-
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             if( j < n ){
@@ -101,6 +96,18 @@ void main(){
     int16_t A[18];
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
+
+
+      ////////////////////
+     ///   DIVISION   ///
+    ////////////////////
+
+    for(i = 0; i < n ; i++){ 
+        for(j = n; j < m; j++){
+            A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
+        }
+    }
+
 
     //Prints the augmented matrix
     printMatrix( A, m, i, j );
