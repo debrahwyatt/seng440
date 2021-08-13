@@ -3,7 +3,7 @@
 /////////////////////
 
 #include <stdio.h>
-#include "arm_neon.h"
+
 
 
   ////////////////////////
@@ -12,7 +12,7 @@
 
 // Matrix dimentions
 #define n 3
-uint8_t m = n * 2;    
+int16_t m = n * 2;    
 
 
   ////////////////////
@@ -20,7 +20,7 @@ uint8_t m = n * 2;
 ////////////////////
 
 //prints a matrix to terminal
-void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
+void printMatrix( int16_t *M, int16_t m, int16_t i, int16_t j ) {
     
     //Print the starting matrix
     for(i = 0; i < n; i++){
@@ -33,7 +33,7 @@ void printMatrix( int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
 }
 
 //The first step in Augmentation
-void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8_t j ) {
+void initializeAugmentation( int16_t *A, int16_t *M, int16_t m, int16_t i, int16_t j ) {
     
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -58,9 +58,9 @@ void initializeAugmentation( int16_t *A, int16_t *M, uint8_t m, uint8_t i, uint8
 void main(){
 
     //Program variables
-    uint8_t i;
-    uint8_t j;
-    uint8_t k;
+    int16_t i;
+    int16_t j;
+    int16_t k;
 
     //Starting matrix
     int16_t M[] = {
@@ -74,7 +74,7 @@ void main(){
     printMatrix( M, n, i, j );
 
     //The augmented matrix shell
-    int16_t A[18];
+    int A[18];
     initializeAugmentation( A, M, m, i, j );
 
     //Prints the augmented matrix
@@ -84,8 +84,8 @@ void main(){
      ///     PIVOT    ///
     ////////////////////
     
-    int8_t first_op;
-    int8_t second_op;    
+    int first_op;
+    int second_op;    
 
     for(k = 0; k < n; k++){
         first_op = A[ k*m + k ];
@@ -102,7 +102,7 @@ void main(){
     }
 
 
-    int64_t x = 9223372036854775800;
+  // int64_t x = 9223372036854775800;
 
 
     // for(k = 0; k < order; k++){
