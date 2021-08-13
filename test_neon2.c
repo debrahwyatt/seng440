@@ -109,6 +109,14 @@ void main(){
     pivot( A, m, i, j, k );
     // printMatrix( A, m, i, j );
 
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            printf("%i ",  A[i*m + j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    
     // Real -> integer
     // Integer -> real
       ////////////////////
@@ -123,13 +131,7 @@ void main(){
 
     collectInverse( I, A, m, i, j, k );
     
-    for(i = 0; i < n; i++){
-        for(j = 0; j < n; j++){
-            printf("%i ",  I[i*n + j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
+
     
 
     //Prints the augmented matrix
