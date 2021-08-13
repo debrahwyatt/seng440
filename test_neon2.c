@@ -115,11 +115,11 @@ void main(){
      ///   DIVISION   ///
     ////////////////////
 
-    // for(i = 0; i < n ; i++){ 
-    //     for(j = n; j < m; j++){
-    //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
-    //     }
-    // }
+    for(i = 0; i < n ; i++){ 
+        for(j = n; j < m; j++){
+            A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
+        }
+    }
 
     collectInverse( I, A, m, i, j, k );
 
