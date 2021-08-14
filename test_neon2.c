@@ -130,8 +130,8 @@ void main(){
 
     // 0000 0000 0000 0000.0000 0000 0000 0000 
 
-    double f = 5.7;
-    printf("%i \n\n", f);
+    float f = 5.7;
+    printf("%d \n\n", f);
 
 
 
