@@ -141,5 +141,5 @@ void main(){
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
-    printf("%i \n\n", c>>2);
+    printf("%i \n\n", c);
 }
