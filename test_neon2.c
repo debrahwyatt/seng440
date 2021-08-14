@@ -130,6 +130,8 @@ void main(){
     int16_t a = 6570 * 2^16;
     int16_t b = 540 * 2^16;
     int32_t c = (b / a);
+    printf("%x \n\n", a);
+    printf("%x \n\n", b);
 
     printf("%i \n\n", c);
 
