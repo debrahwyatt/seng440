@@ -129,7 +129,7 @@ void main(){
 
     int32_t a = 540;
     int32_t b = 6570;
-    int32_t c = (((a)<<8) / (b)<<8);
+    int32_t c = (((a)<<7) / (b)<<9);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
