@@ -81,14 +81,7 @@ void collectInverse( int16_t *I, int16_t *A, int16_t m, int8_t i, int8_t j, int8
     }
 }
 
-void DoubleToFixed(x){
-    x * (double)(1<<scale);
 
-}
-void FixedToDouble(x){
-    (double)x / (double)(1<<scale);
-    
-}
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
@@ -137,8 +130,8 @@ void main(){
 
     // 0000 0000 0000 0000.0000 0000 0000 0000 
 
-    int f = DoubleToFixed(5.7);
-    printf("%i \n\n", FixedToDouble(f));
+    double f = 5.7;
+    printf("%i \n\n", f);
 
 
 
