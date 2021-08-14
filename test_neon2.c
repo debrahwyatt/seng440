@@ -120,16 +120,16 @@ void main(){
     //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
     //     }
     // }
-
+    // 0000 0000 0000 0000.0000 0000 0000 0000 
     
     collectInverse( I, A, m, i, j, k );
 
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
 
-    int32_t a = 6570;
-    int32_t b = (540) << 1;
-    int32_t c = (b / a) << 8;
+    int32_t a = (6570) << 16;
+    int32_t b = (540) << 16;
+    int32_t c = (b / a);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
