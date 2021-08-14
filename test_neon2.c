@@ -128,7 +128,7 @@ void main(){
     printMatrix( I, n, i, j );
 
     int32_t a = 6570;
-    int32_t b = 540 * 100;
+    int32_t b = 540 * 1000;
     int32_t c = (b / a);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
