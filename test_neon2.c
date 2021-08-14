@@ -127,12 +127,12 @@ void main(){
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
 
-    int32_t a = 540;
-    int32_t b = 6570;
-    int32_t c = (((a)<<7) / (b)<<9);
+    int32_t a = 4;
+    int32_t b = 2;
+    int32_t c = (((a)<<8) / (b)<<8);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
-    printf("%i \n\n", c);
+    printf("%i \n\n", c>>8);
 
 }
