@@ -148,6 +148,10 @@ void main(){
 
     int32_t c = a/b;
     // 0000 0000 0000 1010.1000 0000 0000 0000 
+    
+    int32_t d = c >> 16;
+    int32_t e = (c << 16) >> 16;
 
-    printf("%i \n\n", c);
+    printf("%i \n\n", d);
+    printf("%i \n\n", e);
 }
