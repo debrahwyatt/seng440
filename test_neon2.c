@@ -12,6 +12,7 @@
 
 // Matrix dimentions
 #define n 3
+#define scale 16
 // #define m 6
 uint8_t m = n * 2;    
 
@@ -135,7 +136,6 @@ void main(){
     printMatrix( I, n, i, j );
 
     // 0000 0000 0000 0000.0000 0000 0000 0000 
-    int8_t scale = 16; //1/2^16
 
     int f = DoubleToFixed(5.7);
     printf("%i \n\n", FixedToDouble(f));
