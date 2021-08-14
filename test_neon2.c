@@ -139,14 +139,14 @@ void main(){
     printf("%i \n\n", b);
 
     // 0000 0000 0000 1011.0000 0000 0000 0000 
-    a = a << 16;
+    a = a << scale;
     printf("%i \n\n", a);
 
     // 0000 0000 0000 1010.0000 0000 0000 0000 
-    b = b << 16;
+    b = b << scale;
     printf("%i \n\n", b);
 
-    int32_t c = a/b;
+    int32_t c = a/b<<scale;
 
     printf("%i \n\n", c);
 }
