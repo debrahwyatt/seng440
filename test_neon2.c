@@ -146,7 +146,7 @@ void main(){
     b = b << 16;
     printf("%i \n\n", b);
 
-    int32_t (float)c = a/b;
+    float c = a/b;
 
     printf("%.3f \n\n", c);
 }
