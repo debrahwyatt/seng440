@@ -135,11 +135,11 @@ void main(){
 
     // printf("%i \n\n", c>>2);
 
-    int32_t a = 1;
-    int32_t b = 2;
-    int32_t c = (((a)<<1) / (b)<<1);
+    int32_t a = 10;
+    int32_t b = 5;
+    int32_t c = (((a)<<5) / (b)<<5);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
-    printf("%i \n\n", c);
+    printf("%i \n\n", c>>10);
 }
