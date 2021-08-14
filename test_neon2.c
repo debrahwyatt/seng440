@@ -148,5 +148,5 @@ void main(){
 
     int32_t c = a/b;
 
-    printf("%.3f \n\n", c);
+    printf("%i \n\n", c);
 }
