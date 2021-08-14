@@ -133,6 +133,6 @@ void main(){
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
-    printf("%i \n\n", c>>1);
+    printf("%i \n\n", c>>2);
 
 }
