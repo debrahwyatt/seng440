@@ -143,9 +143,7 @@ void main(){
     b = b << 16;
     printf("%i \n\n", b);
 
-    int32_t c = (((a)<<16) / (b)<<16);
-    printf("%i \n\n", a);
-    printf("%i \n\n", b);
+    int32_t c = a/b;
 
     printf("%i \n\n", c);
 }
