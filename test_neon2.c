@@ -143,7 +143,7 @@ void main(){
     printf("%i \n\n", a);
 
     // 0000 0000 0000 1010.0000 0000 0000 0000 
-    b = b << scale;
+    // b = b << scale;
     printf("%i \n\n", b);
 
     int32_t c = a/b<<scale;
