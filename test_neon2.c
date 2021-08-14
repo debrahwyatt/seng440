@@ -129,7 +129,7 @@ void main(){
 
     int32_t a = 10;
     int32_t b = 5;
-    int32_t c = (((a)<<5) / (b)<<5);
+    int32_t c = (((a)<<16) / (b)<<16);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
