@@ -129,7 +129,7 @@ void main(){
 
     int16_t a = 6570;
     int16_t b = 540;
-    int32_t c = (b / a);
+    int32_t c = 1000 * (b / a);
     printf("%i \n\n", a);
     printf("%i \n\n", b);
 
