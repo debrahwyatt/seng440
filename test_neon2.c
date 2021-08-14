@@ -80,6 +80,14 @@ void collectInverse( int16_t *I, int16_t *A, int16_t m, int8_t i, int8_t j, int8
     }
 }
 
+void DoubleToFixed(x){
+    x * (double)(1<<scale);
+
+}
+void FixedToDouble(x){
+    (double)x / (double)(1<<scale);
+    
+}
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
@@ -120,30 +128,38 @@ void main(){
     //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
     //     }
     // }
-    // 0000 0000 0000 0000.0000 0000 0000 0000 
     
     collectInverse( I, A, m, i, j, k );
 
     //Prints the augmented matrix
     printMatrix( I, n, i, j );
 
-    // 0000 0000 0000 0000.0000 0000 0000 1010 
-    int32_t a = 10;
-    printf("%i \n\n", a);
+    // 0000 0000 0000 0000.0000 0000 0000 0000 
+    int8_t scale = 16; //1/2^16
 
-    // 0000 0000 0000 0000.0000 0000 0000 0101 
-    int32_t b = 5;
-    printf("%i \n\n", b);
+    int f = DoubleToFixed(5.7);
+    printf("%i \n\n", FixedToDouble(f));
 
-    // 0000 0000 0000 0101.0000 0000 0000 0000 
-    a = a << 16;
-    printf("%i \n\n", a);
 
-    // 0000 0000 0000 1010.0000 0000 0000 0000 
-    b = b << 16;
-    printf("%i \n\n", b);
 
-    int32_t c = a/b;
 
-    printf("%i \n\n", c);
+    // // 0000 0000 0000 0000.0000 0000 0000 1010 
+    // int32_t a = 10;
+    // printf("%i \n\n", a);
+
+    // // 0000 0000 0000 0000.0000 0000 0000 0101 
+    // int32_t b = 5;
+    // printf("%i \n\n", b);
+
+    // // 0000 0000 0000 0101.0000 0000 0000 0000 
+    // a = a << 16;
+    // printf("%i \n\n", a);
+
+    // // 0000 0000 0000 1010.0000 0000 0000 0000 
+    // b = b << 16;
+    // printf("%i \n\n", b);
+
+    // int32_t c = a/b;
+
+    // printf("%i \n\n", c);
 }
