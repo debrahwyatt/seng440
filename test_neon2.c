@@ -153,8 +153,8 @@ void main(){
 
     // int16_t e = (c << 16) >> 16;
     // // 1000 0000 0000 0000 
-    // printf("%i \n\n", a);
-    // printf("%i \n\n", b);
+    printf("%i \n\n", a);
+    printf("%i \n\n", b);
     printf("%f \n\n", c);
     // printf("%i \n\n", d);
     // printf("%i \n\n", e);
