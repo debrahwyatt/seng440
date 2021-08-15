@@ -3,6 +3,7 @@
 /////////////////////
 
 #include <stdio.h>
+#include <math.h>
 #include "arm_neon.h"
 
 
@@ -12,8 +13,11 @@
 
 // Matrix dimentions
 #define n 3
-#define scale 16
+#define scale1 12
+#define scale2 12
+
 // #define m 6
+
 uint8_t m = n * 2;    
 
 
@@ -22,7 +26,6 @@ uint8_t m = n * 2;
 ////////////////////
 
 //prints a matrix to terminal
-
 void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -34,7 +37,6 @@ void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
 }
 
 //The first step in Augmentation
-
 void initializeAugmentation( int16_t *A, int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -81,6 +83,17 @@ void collectInverse( int16_t *I, int16_t *A, int16_t m, int8_t i, int8_t j, int8
     }
 }
 
+void printInverse( int16_t *I, int8_t m, int8_t i, int8_t j ) {
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            printf("%i ",  I[i*m + j]);
+            // printf("%f ", (float)(I[i*m + j])/pow(2, scale));
+
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
 
   ////////////////////
  /// PROGRAM MAIN ///
@@ -117,49 +130,33 @@ void main(){
      ///   DIVISION   ///
     ////////////////////
 
-    // for(i = 0; i < n ; i++){ 
-    //     for(j = n; j < m; j++){
-    //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
-    //     }
-    // }
+    for(i = 0; i < n ; i++){ 
+        for(j = n; j < m; j++){
+            A[ i*m + j ] = ((A[ i*m + j ] * scale1) / (A[ i*n + j ]/scale2)) ;
+        }
+    }
     
     collectInverse( I, A, m, i, j, k );
+    printInverse( I, n, i, j );
 
     //Prints the augmented matrix
-    printMatrix( I, n, i, j );
+    // printMatrix( I, n, i, j );
 
-    // 0000 0000 0000 0000.0000 0000 0000 0000 
+    // 0000 0000 0000 0000
 
-    // 0000 0000 0000 0000.0000 0000 0001 0101
-    int32_t a = 21;
-    printf("%i \n\n", a);
+    // 0000 0000 0001 0101
+    // int16_t a = 21;
 
-    // 0000 0000 0000 0000.0000 0000 0000 0010
-    int32_t b = 2;
-    printf("%i \n\n", b);
+    // 0000 0000 0000 0010
+    // int16_t b = 2;
 
-    // 0000 0000 0001 0101.0000 0000 0000 0000 
-    a = a << 16;
-    printf("%i \n\n", a);
+    // a = a << scale;
+    // 0001 0101 0000 0000
 
-    // 0000 0000 0000 0000.0000 0000 0000 0010 
-    b = b;
-    printf("%i \n\n", b);
-
-    int32_t c = a/b;
-    // 0000 0000 0000 1010.1000 0000 0000 0000 
-    
-    int32_t d = c >> 16;
-    // 0000 0000 0000 0000 0000 0000 0000 1010
-    
-    int16_t f = c;
-    // 0000 0000 0000 1010 
-
-
-    int16_t e = (c << 16) >> 16;
+    // int16_t e = (c << 16) >> 16;
     // 1000 0000 0000 0000 
+    // printf("%i \n\n", a);
+    // printf("%i \n\n", b);
+    // printf("%f \n\n", (float)(a/b)/pow(2, scale));
 
-    printf("%i \n\n", d);
-    printf("%i \n\n", e);
-    printf("%i \n\n", f);
 }
