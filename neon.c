@@ -69,7 +69,7 @@ void pivot( int16_t *A, int8_t m, int8_t i, int8_t j, int8_t k ) {
 void division( int16_t *A, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n ; i++){ 
         for(j = n; j < m; j++){
-            A[ i*m + j ] = ((A[ i*m + j ] << scale ) / A[ i*m + i ]) ;
+            A[ i*m + j ] = ((A[ i*m + j ] << scale ) / A[ i*m + i ]);
         }
     }
 }
@@ -129,3 +129,4 @@ void main(){
     collectInverse( I, A, m, i, j, k );
     printInverse( I, n, i, j );
 }
+
