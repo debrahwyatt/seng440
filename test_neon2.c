@@ -139,7 +139,7 @@ void main(){
     a = a<<scale;
     b = b<<scale;
 
-    a = a/b
+    a = a/b;
 
     // 0000 0000 0001 0101.0000 0000 0000 0000 
     // a = a << scale;
