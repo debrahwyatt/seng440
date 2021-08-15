@@ -142,7 +142,7 @@ void main(){
     a = (a/b);
     // 0000 1010 1000 0000
 
-    float c = (a/b);
+    float c = (a/b)/(2^(10));
 
     //  0000 0001.0101 0000  
     // a = a << scale;
@@ -163,7 +163,7 @@ void main(){
     // 1000 0000 0000 0000 
     printf("%i \n\n", a);
     printf("%i \n\n", b);
-    printf("%f \n\n", c/(2^(10)));
+    printf("%f \n\n", c);
     // printf("%i \n\n", d);
     // printf("%i \n\n", e);
     // printf("%i \n\n", f);
