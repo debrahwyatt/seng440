@@ -148,6 +148,8 @@ void main(){
     // b = b << scale;
 
     float c = a>>scale;
+    float d = 10;
+    d = d << 1;
     // 0000 0000 0000 1010.1000 0000 0000 0000 
     
     // int32_t d = c >> 16;
