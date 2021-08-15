@@ -136,7 +136,7 @@ void main(){
             // if(A[ i*n + i ] == 0){
             //     continue;
             // }
-            A[ i*m + j ] = ((A[ i*m + j ] * scale ) / A[ i*m + i ]) ;
+            A[ i*m + j ] = ((A[ i*m + j ] << scale ) / A[ i*m + i ]) ;
         }
     }
 
