@@ -133,11 +133,11 @@ void main(){
     for(i = 0; i < n ; i++){ 
         for(j = n; j < m; j++){
             printf("%i \n\n", A[ i*m + j ]);
-            printf("%i \n\n", A[ i*n + i ]);
+            printf("%i \n\n", A[ i*m + i ]);
             if(A[ i*n + i ] == 0){
                 continue;
             }
-            A[ i*m + j ] = (A[ i*m + j ]  / A[ i*n + i ]) ;
+            A[ i*m + j ] = (A[ i*m + j ]  / A[ i*m + i ]) ;
         }
     }
 
