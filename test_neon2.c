@@ -13,8 +13,11 @@
 
 // Matrix dimentions
 #define n 3
-#define scale 12
+#define scale1 12
+#define scale1 12
+
 // #define m 6
+
 uint8_t m = n * 2;    
 
 
@@ -129,7 +132,7 @@ void main(){
 
     for(i = 0; i < n ; i++){ 
         for(j = n; j < m; j++){
-            A[ i*m + j ] = trunc((A[ i*m + j ] * scale) / A[ i*n + j ]) ;
+            A[ i*m + j ] = ((A[ i*m + j ] * scale1) / (A[ i*n + j ]/scale2)) ;
         }
     }
     
