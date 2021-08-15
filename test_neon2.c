@@ -128,9 +128,7 @@ void main(){
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
     printMatrix( A, m, i, j );
-
     division( A, m, i, j );
-
     collectInverse( I, A, m, i, j, k );
     printInverse( I, n, i, j );
 }
