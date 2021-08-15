@@ -48,7 +48,6 @@ void initializeAugmentation( int16_t *A, int16_t *M, int8_t m, int8_t i, int8_t 
 }
 
 void pivot( int16_t *A, int8_t m, int8_t i, int8_t j, int8_t k ) {
-    
     int16_t first_op;
     int16_t second_op;    
 
@@ -95,6 +94,7 @@ void printInverse( int16_t *I, int8_t m, int8_t i, int8_t j ) {
     printf("\n");
 }
 
+
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
@@ -119,11 +119,11 @@ void main(){
     printf("\n");
     printMatrix( M, n, i, j );
 
-    //Augment the matrix
+    //Augment the matrix and print it
     initializeAugmentation( A, M, m, i, j );
     pivot( A, m, i, j, k );
-    printMatrix( A, m, i, j );
     division( A, m, i, j );
+    printMatrix( A, m, i, j );
 
     //Collect and print the inverse
     collectInverse( I, A, m, i, j, k );
