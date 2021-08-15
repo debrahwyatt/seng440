@@ -139,10 +139,10 @@ void main(){
     a = a << scale;
     // 0001 0101 0000 0000
 
-    a = (a/b);
+    // a = (a/b);
     // 0000 1010 1000 0000
 
-    float c = a/(2^scale);
+    // float c = a/(2^scale);
 
     //  0000 0001.0101 0000  
     // a = a << scale;
