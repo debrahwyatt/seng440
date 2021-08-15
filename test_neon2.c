@@ -161,5 +161,5 @@ void main(){
 
     printf("%i \n\n", d);
     printf("%i \n\n", e);
-    printf("%f \n\n", 2.1);
+    printf("%f \n\n", c);
 }
