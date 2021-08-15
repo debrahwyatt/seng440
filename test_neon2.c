@@ -134,10 +134,13 @@ void main(){
         for(j = n; j < m; j++){
             printf("%i \n\n", A[ i*m + j ]);
             printf("%i \n\n", A[ i*n + i ]);
+            if(A[ i*n + i ] == 0){
+                continue;
+            }
             A[ i*m + j ] = (A[ i*m + j ]  / A[ i*n + i ]) ;
         }
     }
-    
+
     collectInverse( I, A, m, i, j, k );
     printInverse( I, n, i, j );
 
