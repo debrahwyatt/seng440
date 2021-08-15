@@ -135,6 +135,7 @@ void main(){
             printf("%i \n\n", A[ i*m + j ]);
             printf("%i \n\n", A[ i*n + i ]);
             A[ i*m + j ] = (A[ i*m + j ]  / A[ i*n + i ]) ;
+            printf("%i \n\n", A[ i*m + j ]);
         }
     }
     
