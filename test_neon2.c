@@ -138,7 +138,7 @@ void main(){
 
     a = a<<scale;
 
-    float c = float(a/b);
+    float c = (float)(a/b);
 
     // 0000 0000 0001 0101.0000 0000 0000 0000 
     // a = a << scale;
