@@ -129,7 +129,7 @@ void main(){
 
     for(i = 0; i < n ; i++){ 
         for(j = n; j < m; j++){
-            A[ i*m + j ] = (A[ i*m + j ] * scale) ;
+            A[ i*m + j ] = (float)((A[ i*m + j ] * scale) / A[ i*n + j ]) ;
         }
     }
     
