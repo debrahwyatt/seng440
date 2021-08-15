@@ -23,7 +23,6 @@ uint8_t m = n * 2;
 ////////////////////
 
 //prints a matrix to terminal
-
 void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -35,7 +34,6 @@ void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
 }
 
 //The first step in Augmentation
-
 void initializeAugmentation( int16_t *A, int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -82,6 +80,17 @@ void collectInverse( int16_t *I, int16_t *A, int16_t m, int8_t i, int8_t j, int8
     }
 }
 
+void printInverse( int16_t *I, int8_t m, int8_t i, int8_t j ) {
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            printf("%f ",  I[i*m + j]);
+            printf("%f ", (float)I[i*m + j]/pow(2, scale));
+
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
 
   ////////////////////
  /// PROGRAM MAIN ///
@@ -118,32 +127,33 @@ void main(){
      ///   DIVISION   ///
     ////////////////////
 
-    // for(i = 0; i < n ; i++){ 
-    //     for(j = n; j < m; j++){
-    //         A[ i*m + j ] = A[ i*m + j ] / A[ i*n + j ];
-    //     }
-    // }
+    for(i = 0; i < n ; i++){ 
+        for(j = n; j < m; j++){
+            A[ i*m + j ] = (A[ i*m + j ] * scale) / A[ i*n + j ];
+        }
+    }
     
     collectInverse( I, A, m, i, j, k );
+    printInverse( I, n, i, j );
 
     //Prints the augmented matrix
-    printMatrix( I, n, i, j );
+    // printMatrix( I, n, i, j );
 
     // 0000 0000 0000 0000
 
     // 0000 0000 0001 0101
-    int16_t a = 21;
+    // int16_t a = 21;
 
     // 0000 0000 0000 0010
-    int16_t b = 2;
+    // int16_t b = 2;
 
-    a = a << scale;
+    // a = a << scale;
     // 0001 0101 0000 0000
 
     // int16_t e = (c << 16) >> 16;
     // 1000 0000 0000 0000 
-    printf("%i \n\n", a);
-    printf("%i \n\n", b);
-    printf("%f \n\n", (float)(a/b)/pow(2, scale));
+    // printf("%i \n\n", a);
+    // printf("%i \n\n", b);
+    // printf("%f \n\n", (float)(a/b)/pow(2, scale));
 
 }
