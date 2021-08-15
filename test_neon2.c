@@ -155,7 +155,7 @@ void main(){
     // // 1000 0000 0000 0000 
     // printf("%i \n\n", a);
     // printf("%i \n\n", b);
-    printf("%i \n\n", c);
+    printf("%f \n\n", c);
     // printf("%i \n\n", d);
     // printf("%i \n\n", e);
     // printf("%i \n\n", f);
