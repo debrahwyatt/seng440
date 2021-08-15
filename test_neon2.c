@@ -136,7 +136,7 @@ void main(){
     // 0000 0000 0000 0010
     int16_t b = 2;
 
-    a = a * 1000;
+    a = a * << scale;
     // 0001 0101 0000 0000
 
     a = (a/b);
@@ -163,7 +163,7 @@ void main(){
     // 1000 0000 0000 0000 
     printf("%i \n\n", a);
     printf("%i \n\n", b);
-    printf("%f \n\n", c/1000);
+    printf("%f \n\n", c/(2^scale));
     // printf("%i \n\n", d);
     // printf("%i \n\n", e);
     // printf("%i \n\n", f);
