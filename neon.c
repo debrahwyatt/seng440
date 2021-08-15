@@ -13,7 +13,7 @@
 
 // Matrix dimentions
 #define n 3
-#define scale 7
+#define scale 8
 uint8_t m = n * 2;    
 
 
