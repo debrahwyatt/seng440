@@ -13,7 +13,7 @@
 
 // Matrix dimentions
 #define n 3
-#define scale 12
+#define scale 8
 
 // #define m 6
 
