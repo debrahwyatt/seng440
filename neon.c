@@ -14,9 +14,6 @@
 // Matrix dimentions
 #define n 3
 #define scale 8
-
-// #define m 6
-
 uint8_t m = n * 2;    
 
 
@@ -24,7 +21,6 @@ uint8_t m = n * 2;
  ///   FUNCTIONS  ///
 ////////////////////
 
-//prints a matrix to terminal
 void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -35,7 +31,6 @@ void printMatrix( int16_t *M, int8_t m, int8_t i, int8_t j ) {
     printf("\n");
 }
 
-//The first step in Augmentation
 void initializeAugmentation( int16_t *A, int16_t *M, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
@@ -129,6 +124,8 @@ void main(){
     pivot( A, m, i, j, k );
     printMatrix( A, m, i, j );
     division( A, m, i, j );
+
+    //Collect and print the inverse
     collectInverse( I, A, m, i, j, k );
     printInverse( I, n, i, j );
 }
