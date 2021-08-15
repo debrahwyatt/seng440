@@ -14,7 +14,7 @@
 // Matrix dimentions
 #define n 3
 #define scale1 12
-#define scale1 12
+#define scale2 12
 
 // #define m 6
 
