@@ -12,7 +12,7 @@
 
 // Matrix dimentions
 #define n 3
-#define scale 16
+#define scale 8
 // #define m 6
 uint8_t m = n * 2;    
 
@@ -137,10 +137,10 @@ void main(){
     int16_t b = 2;
 
     // 0000 0000 0001 0101.0000 0000 0000 0000 
-    a = a << 16;
+    a = a << scale;
 
     // 0000 0000 0000 0000.0000 0000 0000 0010 
-    b = b;
+    b = b << scale;
 
     float c = a/b;
     // 0000 0000 0000 1010.1000 0000 0000 0000 
