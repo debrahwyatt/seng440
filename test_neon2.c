@@ -137,9 +137,8 @@ void main(){
     int16_t b = 2;
 
     a = a<<scale;
-    b = b<<scale;
 
-    a = a/b;
+    float c = float(a/b);
 
     // 0000 0000 0001 0101.0000 0000 0000 0000 
     // a = a << scale;
@@ -147,7 +146,7 @@ void main(){
     // 0000 0000 0000 0000.0000 0000 0000 0010 
     // b = b << scale;
 
-    float c = (float)a;
+    // float c = (float)a;
     // 0000 0000 0000 1010.1000 0000 0000 0000 
     
     // int32_t d = c >> 16;
