@@ -143,7 +143,7 @@ void main(){
     // a = (a/b);
     // 0000 1010 1000 0000
 
-    float c = a/(b*pow(2, 4));
+    float c = a/b;
 
     //  0000 0001.0101 0000  
     // a = a << scale;
