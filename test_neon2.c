@@ -133,8 +133,8 @@ void main(){
         }
     }
     
-    // collectInverse( I, A, m, i, j, k );
-    // printInverse( I, n, i, j );
+    collectInverse( I, A, m, i, j, k );
+    printInverse( I, n, i, j );
 
     //Prints the augmented matrix
     // printMatrix( I, n, i, j );
