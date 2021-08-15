@@ -84,7 +84,7 @@ void printInverse( int16_t *I, int8_t m, int8_t i, int8_t j ) {
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
             printf("%f ",  I[i*m + j]);
-            printf("%f ", (float)I[i*m + j]/pow(2, scale));
+            printf("%f ", (float)(I[i*m + j])/pow(2, scale));
 
         }
         printf("\n");
