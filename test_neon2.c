@@ -132,7 +132,7 @@ void main(){
 
     for(i = 0; i < n ; i++){ 
         for(j = n; j < m; j++){
-            A[ i*m + j ] = ((A[ i*m + j ] * scale1) / (A[ i*n + j ]/scale2)) ;
+            A[ i*m + j ] = ((A[ i*m + j ] ) / A[ i*n + j ]) ;
         }
     }
     
