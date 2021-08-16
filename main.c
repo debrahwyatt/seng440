@@ -5,7 +5,7 @@
 #include <math.h>
 
 //Global variables
-#define order 3
+#define order 5
 #define scale 8
 
 
@@ -17,11 +17,13 @@ int main(void) {
     printf("\n");
     
     // A 3x3 example matrix
-    short matrix[3][3] = {    
-                        {3, 2, -4}, 
-                        {2, 3, 3}, 
-                        {5, -3, 1} 
-                    };
+    short matrix[5][5] = {
+        {1,3,4,1,6},
+        {2,1,1,3,1},
+        {2,3,1,3,3}, 
+        {1,2,5,1,2}, 
+        {1,5,4,1,1}
+    };
 
     //system variables
     short first_op;
@@ -29,7 +31,7 @@ int main(void) {
     unsigned char i = 0;
     unsigned char j = 0;
     unsigned char m = 0;
-    short augmented_matrix[3][order*2];
+    int augmented_matrix[5][order*2];
 
 
       ////////////////////
@@ -41,13 +43,20 @@ int main(void) {
         augmented_matrix[i][0] = matrix[i][0];
         augmented_matrix[i][1] = matrix[i][1];
         augmented_matrix[i][2] = matrix[i][2];
-        augmented_matrix[i][3] = 0;
-        augmented_matrix[i][4] = 0;
+        augmented_matrix[i][3] = matrix[i][3];
+        augmented_matrix[i][4] = matrix[i][4];
+
         augmented_matrix[i][5] = 0;
+        augmented_matrix[i][6] = 0;
+        augmented_matrix[i][7] = 0;
+        augmented_matrix[i][8] = 0;
+        augmented_matrix[i][9] = 0;
     }
-    augmented_matrix[0][3] = 1;
-    augmented_matrix[1][4] = 1;
-    augmented_matrix[2][5] = 1;
+    augmented_matrix[0][5] = 1;
+    augmented_matrix[1][6] = 1;
+    augmented_matrix[2][7] = 1;
+    augmented_matrix[3][8] = 1;
+    augmented_matrix[4][9] = 1;
     //////////////////////////////////////////////////
 
 
@@ -68,7 +77,11 @@ int main(void) {
                 augmented_matrix[i][2] = first_op*augmented_matrix[i][2] - second_op*augmented_matrix[m][2];
                 augmented_matrix[i][3] = first_op*augmented_matrix[i][3] - second_op*augmented_matrix[m][3];
                 augmented_matrix[i][4] = first_op*augmented_matrix[i][4] - second_op*augmented_matrix[m][4];
-                augmented_matrix[i][5] = first_op*augmented_matrix[i][5] - second_op*augmented_matrix[m][5];                    
+                augmented_matrix[i][5] = first_op*augmented_matrix[i][5] - second_op*augmented_matrix[m][5];       
+                augmented_matrix[i][6] = first_op*augmented_matrix[i][6] - second_op*augmented_matrix[m][6];
+                augmented_matrix[i][7] = first_op*augmented_matrix[i][7] - second_op*augmented_matrix[m][7];
+                augmented_matrix[i][8] = first_op*augmented_matrix[i][8] - second_op*augmented_matrix[m][8];    
+                augmented_matrix[i][9] = first_op*augmented_matrix[i][9] - second_op*augmented_matrix[m][9];    
             }    
         } 
     }
@@ -82,6 +95,8 @@ int main(void) {
         augmented_matrix[i][order] = (augmented_matrix[i][order] << scale ) / augmented_matrix[i][i];
         augmented_matrix[i][order + 1] = (augmented_matrix[i][order + 1] << scale ) / augmented_matrix[i][i];
         augmented_matrix[i][order + 2] = (augmented_matrix[i][order + 2] << scale ) / augmented_matrix[i][i];
+        augmented_matrix[i][order + 3] = (augmented_matrix[i][order + 3] << scale ) / augmented_matrix[i][i];
+        augmented_matrix[i][order + 4] = (augmented_matrix[i][order + 4] << scale ) / augmented_matrix[i][i];        
     }
 
     //print the inverse to console
@@ -89,6 +104,8 @@ int main(void) {
         printf("[%f]", (float)(augmented_matrix[i][order]/pow(2,scale)));
         printf("[%f]", (float)(augmented_matrix[i][order + 1]/pow(2,scale)));
         printf("[%f]", (float)(augmented_matrix[i][order + 2]/pow(2,scale)));
+        printf("[%f]", (float)(augmented_matrix[i][order + 3]/pow(2,scale)));
+        printf("[%f]", (float)(augmented_matrix[i][order + 4]/pow(2,scale)));
         printf("\n");
     }
     printf("\n");
