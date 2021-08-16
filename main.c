@@ -46,24 +46,6 @@ int main(void) {
     int augmented_matrix[3][order*2];
     int inv_matrix[3][3];
 
-    // unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
-    // unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
-
-
-    ///////////////////
-    ///Print matrix///
-    /////////////////
-
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-    // for(i=0; i<row; i++){
-    //     for(j=0; j<col; j++){
-    //         printf("[%d]", matrix[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    ///////////////////////////////////////////
-
 
       ////////////////////
      /// AUGMENTATION ///
@@ -86,23 +68,6 @@ int main(void) {
         }
     }
     //////////////////////////////////////////////////
-
-
-    /////////////////////////////
-    ///Print Augmented matrix///
-    ///////////////////////////
-
-    // row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
-    // col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-    // for(i=0; i<row; i++){
-    //     for(j=0; j<col; j++){
-    //         printf("[%d]", augmented_matrix[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    ///////////////////////////////////////////
 
 
       ////////////////////
@@ -142,7 +107,7 @@ int main(void) {
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
             // inv_matrix[i][k++] = augmented_matrix[i][j];
-            printf("[%d]", augmented_matrix[i][j]/pow(2,scale));
+            printf("[%d]", augmented_matrix[i][j]/(256));
         }
         printf("\n");
     }
