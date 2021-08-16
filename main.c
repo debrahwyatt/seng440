@@ -112,7 +112,7 @@ int main(void) {
 
 
     int l = 10;
-    (float)l;
+    printf("%f", (float)l);
 
     /////////////////////////////
     ///Print Augmented matrix///
