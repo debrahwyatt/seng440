@@ -43,10 +43,10 @@ int main(void) {
     int second_op;    
 
     int augmented_matrix[3][order*2];
-    int inv_matrix[order][order];
+    int inv_matrix[3][3];
 
-    unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
-    unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
+    // unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
+    // unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
 
 
     ///////////////////
