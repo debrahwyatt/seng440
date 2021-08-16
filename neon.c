@@ -99,7 +99,7 @@ void printInverse( int16_t *I, int8_t m, int8_t i, int8_t j ) {
  /// PROGRAM MAIN ///
 ////////////////////
 
-int main(){
+void main(){
 
     //Program variables
     int8_t i;
