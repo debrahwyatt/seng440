@@ -8,6 +8,7 @@
 
 //Global variables
 #define order 3
+#define scale 8
 
 
   ////////////////////////////
@@ -120,6 +121,28 @@ int main(void) {
     }
 
 
+
+
+
+      ////////////////////
+     ///   DIVISION   ///
+    ////////////////////
+
+    for(i = 0; i < order ; i++){ 
+        for(j = order; j < 2*order; j++){
+            augmented_matrix[i][j] = (augmented_matrix[i][j] << scale) / augmented_matrix[i][i];
+        }
+    }
+
+    // int k = 0;
+    // // collect the inverted matrix
+    // for(i = 0; i < order ; i++){ 
+    //     k = 0;
+    //     for(j = order; j < 2*order; j++){
+    //         inv_matrix[i][k++] = augmented_matrix[i][j];
+    //     }
+    // }
+
     /////////////////////////////
     ///Print Augmented matrix///
     ///////////////////////////
@@ -133,26 +156,6 @@ int main(void) {
     }
     printf("\n");
     /////////////////////////////////////////////////
-
-
-      ////////////////////
-     ///   DIVISION   ///
-    ////////////////////
-
-    // for(i = 0; i < order ; i++){ 
-    //     for(j = order; j < 2*order; j++){
-    //         augmented_matrix[i][j] = augmented_matrix[i][j] / augmented_matrix[i][i];
-    //     }
-    // }
-
-    // int k = 0;
-    // // collect the inverted matrix
-    // for(i = 0; i < order ; i++){ 
-    //     k = 0;
-    //     for(j = order; j < 2*order; j++){
-    //         inv_matrix[i][k++] = augmented_matrix[i][j];
-    //     }
-    // }
 
 }
 
