@@ -2,6 +2,7 @@
  /// PACKAGES ///
 ////////////////
 #include <stdio.h>
+#include <math.h>
 // #include "arm_neon.h"
 // uint32x2_t aa, bb, ss;
 // -std=c99
@@ -151,7 +152,7 @@ int main(void) {
 
     for(i=0; i<order; i++){
         for(j=0; j<order; j++){
-            printf("[%d]", inv_matrix[i][j]);
+            printf("[%f]", (float)inv_matrix[i][j]/pow(2,scale));
         }
         printf("\n");
     }
