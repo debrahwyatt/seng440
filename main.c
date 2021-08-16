@@ -134,22 +134,21 @@ int main(void) {
         }
     }
 
-    // int k = 0;
-    // // collect the inverted matrix
-    // for(i = 0; i < order ; i++){ 
-    //     k = 0;
-    //     for(j = order; j < 2*order; j++){
-    //         inv_matrix[i][k++] = augmented_matrix[i][j];
-    //     }
-    // }
+    int k = 0;
+    // collect the inverted matrix
+    for(i = 0; i < order ; i++){ 
+        k = 0;
+        for(j = order; j < 2*order; j++){
+            inv_matrix[i][k++] = augmented_matrix[i][j];
+        }
+    }
 
     /////////////////////////////
     ///Print Augmented matrix///
     ///////////////////////////
 
-    printf("Size of Matrix is: %dx%d\n", row, col);
-    for(i=0; i<row; i++){
-        for(j=0; j<col; j++){
+    for(i=0; i<order; i++){
+        for(j=0; j<order; j++){
             printf("[%d]", augmented_matrix[i][j]);
         }
         printf("\n");
