@@ -38,7 +38,7 @@ int main(void) {
     unsigned char m = 0;
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
-    
+
     int first_op;
     int second_op;    
 
@@ -132,7 +132,7 @@ int main(void) {
 
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
-            augmented_matrix[i][j] = (augmented_matrix[i][j] << scale) / augmented_matrix[i][i];
+            augmented_matrix[i][j] = (augmented_matrix[i][j] ) / augmented_matrix[i][i];
         }
     }
 
