@@ -99,7 +99,9 @@ int main(void) {
     //print the inverse to console
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
-            printf("[%f]", (float)(augmented_matrix[i][j]/pow(2,scale)));
+            printf("[%f]", (float)(augmented_matrix[i][order]/pow(2,scale)));
+            printf("[%f]", (float)(augmented_matrix[i][order + 1]/pow(2,scale)));
+            printf("[%f]", (float)(augmented_matrix[i][order + 2]/pow(2,scale)));
         }
         printf("\n");
     }
