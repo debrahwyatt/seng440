@@ -89,9 +89,6 @@ int main(void) {
     }
 
 
-
-
-
       ////////////////////
      ///   DIVISION   ///
     ////////////////////
@@ -112,6 +109,10 @@ int main(void) {
         printf("\n");
     }
     printf("\n");
+
+
+    int l = 10;
+    (float)l;
 
     /////////////////////////////
     ///Print Augmented matrix///
