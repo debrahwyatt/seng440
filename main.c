@@ -3,9 +3,6 @@
 ////////////////
 #include <stdio.h>
 #include <math.h>
-// #include "arm_neon.h"
-// uint32x2_t aa, bb, ss;
-// -std=c99
 
 //Global variables
 #define order 3
@@ -47,21 +44,6 @@ int main(void) {
     int inv_matrix[3][3];
 
 
-    ///////////////////
-    ///Print matrix///
-    /////////////////
-
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-    // for(i=0; i<row; i++){
-    //     for(j=0; j<col; j++){
-    //         printf("[%d]", matrix[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    ///////////////////////////////////////////
-
-
       ////////////////////
      /// AUGMENTATION ///
     ////////////////////
@@ -83,23 +65,6 @@ int main(void) {
         }
     }
     //////////////////////////////////////////////////
-
-
-    /////////////////////////////
-    ///Print Augmented matrix///
-    ///////////////////////////
-
-    // row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
-    // col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-    // for(i=0; i<row; i++){
-    //     for(j=0; j<col; j++){
-    //         printf("[%d]", augmented_matrix[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    ///////////////////////////////////////////
 
 
       ////////////////////
@@ -131,61 +96,14 @@ int main(void) {
         }
     }
 
-    int k = 0;
-    // collect the inverted matrix
+    //print the inverse to console
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
-            // inv_matrix[i][k++] = augmented_matrix[i][j];
             printf("[%f]", (float)(augmented_matrix[i][j]/pow(2,scale)));
         }
         printf("\n");
     }
     printf("\n");
 
-    /////////////////////////////
-    ///Print Augmented matrix///
-    ///////////////////////////
-    
-    // printf("[%d]", inv_matrix[0][0]);
-
-    // for(i=0; i<3; i++){
-    //     for(j=0; j<3; j++){
-    //         printf("[%d]", inv_matrix[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    /////////////////////////////////////////////////
-
 }
 
-
-  /////////////////
- /// FUNCTIONS ///
-/////////////////
-
-//prints a matrix to terminal
-void printMatrix(short (*matrix)[2], unsigned char row, unsigned char col) {
-    
-    // //increment variables
-    // unsigned short x;
-    // unsigned short y;
-
-    // printf("Size of Matrix is: %dx%d\n", row, col);
-
-    // for(x=0; x<row; x++){
-    //     for(y=0; y<col; y++){
-    //         printf("[%d]", matrix[x][y]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-    // printf("[%d]", matrix[1][0]);
-
-}
-
-
-void augment_matrix(){
-    //Augmentation variables
-
-}
