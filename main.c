@@ -47,6 +47,21 @@ int main(void) {
     int inv_matrix[3][3];
 
 
+    ///////////////////
+    ///Print matrix///
+    /////////////////
+
+    // printf("Size of Matrix is: %dx%d\n", row, col);
+    // for(i=0; i<row; i++){
+    //     for(j=0; j<col; j++){
+    //         printf("[%d]", matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
+    ///////////////////////////////////////////
+
+
       ////////////////////
      /// AUGMENTATION ///
     ////////////////////
@@ -68,6 +83,23 @@ int main(void) {
         }
     }
     //////////////////////////////////////////////////
+
+
+    /////////////////////////////
+    ///Print Augmented matrix///
+    ///////////////////////////
+
+    // row = sizeof(augmented_matrix) / sizeof(augmented_matrix[0]);
+    // col = (sizeof(augmented_matrix)/sizeof(augmented_matrix[0][0]))/row;
+    // printf("Size of Matrix is: %dx%d\n", row, col);
+    // for(i=0; i<row; i++){
+    //     for(j=0; j<col; j++){
+    //         printf("[%d]", augmented_matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
+    ///////////////////////////////////////////
 
 
       ////////////////////
@@ -103,25 +135,26 @@ int main(void) {
     // collect the inverted matrix
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
-            inv_matrix[i][k++] = augmented_matrix[i][j];
+            // inv_matrix[i][k++] = augmented_matrix[i][j];
+            printf("[%f]", (float)(augmented_matrix[i][j]/pow(2,scale)));
         }
         printf("\n");
     }
     printf("\n");
-
-
 
     /////////////////////////////
     ///Print Augmented matrix///
     ///////////////////////////
     
-    for(i=0; i<3; i++){
-        for(j=0; j<3; j++){
-            printf("[%d]", (float)(inv_matrix[i][j]/pow(2, scale)));
-        }
-        printf("\n");
-    }
-    printf("\n");
+    // printf("[%d]", inv_matrix[0][0]);
+
+    // for(i=0; i<3; i++){
+    //     for(j=0; j<3; j++){
+    //         printf("[%d]", inv_matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
     /////////////////////////////////////////////////
 
 }
