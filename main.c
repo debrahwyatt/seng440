@@ -149,13 +149,13 @@ int main(void) {
     ///Print Augmented matrix///
     ///////////////////////////
 
-    for(i=0; i<order; i++){
-        for(j=0; j<order; j++){
-            printf("[%d]", inv_matrix[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
+    // for(i=0; i<order; i++){
+    //     for(j=0; j<order; j++){
+    //         printf("[%d]", inv_matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    // printf("\n");
     /////////////////////////////////////////////////
 
 }
