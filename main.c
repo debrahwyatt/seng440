@@ -150,7 +150,7 @@ int main(void) {
     ///Print Augmented matrix///
     ///////////////////////////
     
-    printf("[%d]", augmented_matrix[0][0]);
+    printf("[%d]", inv_matrix[0][0]);
 
     for(i=0; i<order; i++){
         for(j=0; j<order; j++){
