@@ -2,7 +2,7 @@
 
 
 ## matrix inversion
-calculates inverse of matrix 
+calculates inverse of 5x5 matrix using Gauss Jordan Elimination
 
 
 ## Compile and run on Windows
