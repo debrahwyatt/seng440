@@ -37,8 +37,8 @@ int main(void) {
     unsigned char m = 0;
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
-    unsigned char first_op;
-    unsigned char second_op;    
+    int first_op;
+    int second_op;    
 
     int augmented_matrix[3][order*2];
 
