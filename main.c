@@ -38,10 +38,12 @@ int main(void) {
     unsigned char m = 0;
     unsigned char mat_i = 0;
     unsigned char mat_j = order;
+    
     int first_op;
     int second_op;    
 
     int augmented_matrix[3][order*2];
+    int inv_matrix[order][order];
 
     unsigned char row = sizeof(matrix) / sizeof(matrix[0]);
     unsigned char col = (sizeof(matrix)/sizeof(matrix[0][0]))/row;
