@@ -142,7 +142,7 @@ int main(void) {
     for(i = 0; i < order ; i++){ 
         for(j = order; j < 2*order; j++){
             // inv_matrix[i][k++] = augmented_matrix[i][j];
-            printf("[%f]", (float)(augmented_matrix[i][j]));
+            printf("[%.4f]", (float)augmented_matrix[i][j]);
         }
         printf("\n");
     }
