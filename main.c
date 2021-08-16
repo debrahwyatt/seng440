@@ -9,13 +9,6 @@
 #define scale 8
 
 
-  ////////////////////////////
- /// FUNCTION DECLARATION ///
-////////////////////////////
-
-void printMatrix(short (*)[], unsigned char row, unsigned char col);
-
-
   ////////////////////
  /// PROGRAM MAIN ///
 ////////////////////
@@ -31,17 +24,12 @@ int main(void) {
                     };
 
     //system variables
+    short first_op;
+    short second_op;                      
     unsigned char i = 0;
     unsigned char j = 0;
     unsigned char m = 0;
-    unsigned char mat_i = 0;
-    unsigned char mat_j = order;
-
-    int first_op;
-    int second_op;    
-
-    int augmented_matrix[3][order*2];
-    int inv_matrix[3][3];
+    short augmented_matrix[3][order*2];
 
 
       ////////////////////
@@ -50,20 +38,16 @@ int main(void) {
 
     // Sets up the matrix adjacent to an identity matrix
     for(i = 0; i < order; i++){
-        for(j = 0; j < order*2; j++){
-            if( (i < order) && (j < order) ){
-                augmented_matrix[i][j] = matrix[i][j];
-            }
-            else if(i == mat_i && j == mat_j) {
-               augmented_matrix[i][j] = 1;
-               mat_i++;
-               mat_j++;
-            }
-            else{
-                augmented_matrix[i][j] = 0;
-            }
-        }
+        augmented_matrix[i][0] = matrix[i][0];
+        augmented_matrix[i][1] = matrix[i][1];
+        augmented_matrix[i][2] = matrix[i][2];
+        augmented_matrix[i][3] = 0;
+        augmented_matrix[i][4] = 0;
+        augmented_matrix[i][5] = 0;
     }
+    augmented_matrix[0][3] = 1;
+    augmented_matrix[1][4] = 1;
+    augmented_matrix[2][5] = 1;
     //////////////////////////////////////////////////
 
 
@@ -77,11 +61,14 @@ int main(void) {
         for(i = 0; i < order ; i++){ 
             second_op = augmented_matrix[i][m];
 
-            for(j = 0; j < 2*order; j++){
-                if(i != m){
-                    augmented_matrix[i][j] = first_op*augmented_matrix[i][j] - second_op*augmented_matrix[m][j];
-                }
-            }
+            if(i != m){
+                augmented_matrix[i][0] = first_op*augmented_matrix[i][0] - second_op*augmented_matrix[m][0];
+                augmented_matrix[i][1] = first_op*augmented_matrix[i][1] - second_op*augmented_matrix[m][1];
+                augmented_matrix[i][2] = first_op*augmented_matrix[i][2] - second_op*augmented_matrix[m][2];
+                augmented_matrix[i][3] = first_op*augmented_matrix[i][3] - second_op*augmented_matrix[m][3];
+                augmented_matrix[i][4] = first_op*augmented_matrix[i][4] - second_op*augmented_matrix[m][4];
+                augmented_matrix[i][5] = first_op*augmented_matrix[i][5] - second_op*augmented_matrix[m][5];                    
+            }    
         } 
     }
 
@@ -91,18 +78,16 @@ int main(void) {
     ////////////////////
 
     for(i = 0; i < order ; i++){ 
-        for(j = order; j < 2*order; j++){
-            augmented_matrix[i][j] = (augmented_matrix[i][j] << scale ) / augmented_matrix[i][i];
-        }
+        augmented_matrix[i][order] = (augmented_matrix[i][order] << scale ) / augmented_matrix[i][i];
+        augmented_matrix[i][order + 1] = (augmented_matrix[i][order + 1] << scale ) / augmented_matrix[i][i];
+        augmented_matrix[i][order + 2] = (augmented_matrix[i][order + 2] << scale ) / augmented_matrix[i][i];
     }
 
     //print the inverse to console
     for(i = 0; i < order ; i++){ 
-        for(j = order; j < 2*order; j++){
-            printf("[%f]", (float)(augmented_matrix[i][order]/pow(2,scale)));
-            printf("[%f]", (float)(augmented_matrix[i][order + 1]/pow(2,scale)));
-            printf("[%f]", (float)(augmented_matrix[i][order + 2]/pow(2,scale)));
-        }
+        printf("[%f]", (float)(augmented_matrix[i][order]/pow(2,scale)));
+        printf("[%f]", (float)(augmented_matrix[i][order + 1]/pow(2,scale)));
+        printf("[%f]", (float)(augmented_matrix[i][order + 2]/pow(2,scale)));
         printf("\n");
     }
     printf("\n");
