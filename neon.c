@@ -129,4 +129,3 @@ void main(){
     collectInverse( I, A, m, i, j, k );
     printInverse( I, n, i, j );
 }
-
